@@ -1,0 +1,18 @@
+/* src/styles/index.css */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import url("https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100&family=IBM+Plex+Mono:wght@100;400;600;700&family=Manrope:wght@200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+.servicesAnimation {
+  animation: animateHorizontal 30s linear infinite;
+}
+
+@keyframes animateHorizontal {
+  0% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
