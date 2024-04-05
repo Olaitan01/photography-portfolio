@@ -5,6 +5,8 @@ import ServicesSnippet from './components/pages/home/services-Snippet'
 import PortfolioSnippet from './components/pages/home/portfolioSnippet'
 import Faqs from './components/pages/home/faqs'
 import Testimonial from './components/pages/home/testimonial'
+import Footer from './components/footer/footer'
+
 function App() {
   return (
     <>
@@ -15,6 +17,7 @@ function App() {
     <PortfolioSnippet/>
     <Faqs/>
     <Testimonial/>
+    <Footer/>
     </>
   )
 }
