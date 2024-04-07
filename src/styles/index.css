@@ -18,6 +18,10 @@
 .footerSerivce{
   color: rgb(93,95,103);
   font-weight: 500;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: .8rem;
+  
 }
 
 .footerListContainer{
@@ -26,7 +30,7 @@
 }
 
 .footerList{
-  font-size: 1;
+  font-size: .8rem;
   padding: .5em 0;
   position: relative; 
   text-decoration: rgb(93,95,103) underline ;

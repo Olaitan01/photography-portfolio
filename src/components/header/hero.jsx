@@ -1,11 +1,12 @@
 import arrowTopRight from "/src/assets/arrow-top-right.png";
 import glitter from "/src/assets/glitter.png";
-import image1 from "/src/assets/about/Image.png";
-import image2 from "/src/assets/about/Image (1).png";
-import image3 from "/src/assets/about/Image (2).png";
-import image4 from "/src/assets/about/mobile/Image (15).png";
-import image5 from "/src/assets/about/mobile/Image (13).png";
-import image6 from "/src/assets/about/mobile/Image (14).png";
+import heroImage from "/src/assets/about/Images Container.png"
+// import image1 from "/src/assets/about/Image.png";
+// import image2 from "/src/assets/about/Image (1).png";
+// import image3 from "/src/assets/about/Image (2).png";
+// import image4 from "/src/assets/about/mobile/Image (15).png";
+// import image5 from "/src/assets/about/mobile/Image (13).png";
+// import image6 from "/src/assets/about/mobile/Image (14).png";
 
 function Hero() {
   return (
@@ -51,8 +52,10 @@ function Hero() {
         <span className="inline-block">PORTRAIGHT PHOTOGRAPHY</span>
       </div>
 
-      <div className="mx-2">
-        <div className="flex flex-wrap relative h-[50vw] px-2 w-full gap-2">
+      <div className="m-auto px-2" >
+        <img src={heroImage} alt="grid creative photographed images" className="object-cover max-w-full w-full" />
+
+        {/* <div className="flex flex-wrap relative h-[50vw] px-2 w-full gap-2">
           <img
             src={image1}
             alt="hero model image"
@@ -75,7 +78,7 @@ function Hero() {
             className="object-cover  w-[45%] h-40 -translate-y-[10rem] "
           />
           <img src={image6} alt="hero model image" className="object-cover h-20 w-[14%] absolute right-4 top-[54%]" />
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
-import rightArrow from "/src/assets/right-arrow.svg";
-import fivestars from "/src/assets/5stars.png";
+import rightArrowImage from "/src/assets/right-arrow.svg";
+import fivestarsImage from "/src/assets/5stars.png";
 // import testimonialBg from "/src/assets/testimonial-bg.png"
 
 function Testimonial() {
@@ -10,15 +10,15 @@ function Testimonial() {
         "Damien's photography doesn't just capture moments; it captures emotions. Hes work is simply mesmerizing.",
     },
     {
-        name: "John Smith",
-        review:
-          "Damien has an incredible talent for making every event feel effortless, and the results speak for themselves.",
-      },
-      {
-        name: "Samantha Davis",
-        review:
-          "I was blown away by Damien's ability to capture the essence of our wedding day. Hes photographs are our cherished memories.",
-      },
+      name: "John Smith",
+      review:
+        "Damien has an incredible talent for making every event feel effortless, and the results speak for themselves.",
+    },
+    {
+      name: "Samantha Davis",
+      review:
+        "I was blown away by Damien's ability to capture the essence of our wedding day. Hes photographs are our cherished memories.",
+    },
   ];
 
   return (
@@ -75,7 +75,8 @@ function Testimonial() {
             </div>
             <div>
               <button className="text-headerGrey text-sm inline-flex gap-2 bg-lightDark rounded-md p-4 my-2">
-                View All Testimonials <img src={rightArrow} alt="right arrow" />
+                View All Testimonials{" "}
+                <img src={rightArrowImage} alt="right arrow" />
               </button>
             </div>
           </div>
@@ -83,21 +84,23 @@ function Testimonial() {
       </div>
 
       <div>
-        {testimonials.map((testimonial,index) =>
-        <div key={index} className="text-headerGrey   w-full ">
+        {testimonials.map((testimonial, index) => (
+          <div key={index} className="text-headerGrey   w-full ">
             <div className="testimonialCard flex justify-between items-start my-6 border-2 p-4 rounded-md border-lightDark w-full">
-                <div>
-                    <p className="text-sm font-light"> {testimonial.name}</p>
-                    <p className="text-sm font-thin">USA, California</p>
-                    <img src={fivestars} alt="yellow 5 stars review" className="max-w-full my-4"/>
-                    <p className="text-sm font-normal w-60">
-                        {testimonial.review}
-                    </p>
-                </div>
-                <div className=" p-2 flex gap-2 items-center border-roundedGrey border-2  justify-center rounded-full">
+              <div>
+                <p className="text-sm font-light"> {testimonial.name}</p>
+                <p className="text-sm font-thin">USA, California</p>
+                <img
+                  src={fivestarsImage}
+                  alt="yellow 5 stars review"
+                  className="max-w-full my-4"
+                />
+                <p className="text-sm font-normal w-60">{testimonial.review}</p>
+              </div>
+              <div className=" p-2 flex gap-2 items-center border-roundedGrey border-2  justify-center rounded-full">
                 <span className=" border-2 w-[40px] h-[40px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
                   <svg
-                  className="max-w-full"
+                    className="max-w-full"
                     width="16"
                     height="16"
                     viewBox="0 0 16 16"
@@ -119,7 +122,7 @@ function Testimonial() {
                 </span>
                 <span className=" border-2 w-[40px] h-[40px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
                   <svg
-                  className="max-w-full"
+                    className="max-w-full"
                     width="16"
                     height="16"
                     viewBox="0 0 16 16"
@@ -141,7 +144,7 @@ function Testimonial() {
                 </span>
                 <span className=" border-2 w-[40px] h-[40px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
                   <svg
-                  className="max-w-full"
+                    className="max-w-full"
                     width="16"
                     height="16"
                     viewBox="0 0 16 16"
@@ -163,44 +166,44 @@ function Testimonial() {
                 </span>
               </div>
             </div>
+          </div>
+        ))}
+        <div className="p-2 my-6 flex gap-4 items-center border-roundedGrey border-2 w-[40%] justify-center rounded-full m-auto">
+          <button className=" border-2 w-[60px] h-[60px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
+            <svg
+              width="10"
+              height="16"
+              viewBox="0 0 10 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8.5 1L1.5 8L8.5 15"
+                stroke="white"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+          <button className=" border-2 w-[60px] h-[60px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
+            <svg
+              width="10"
+              height="16"
+              viewBox="0 0 10 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.5 1L8.5 8L1.5 15"
+                stroke="white"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
         </div>
-        )}
-         <div className="p-2 my-6 flex gap-4 items-center border-roundedGrey border-2 w-[40%] justify-center rounded-full m-auto">
-              <button className=" border-2 w-[60px] h-[60px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
-                <svg
-                  width="10"
-                  height="16"
-                  viewBox="0 0 10 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M8.5 1L1.5 8L8.5 15"
-                    stroke="white"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
-              <button className=" border-2 w-[60px] h-[60px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
-                <svg
-                  width="10"
-                  height="16"
-                  viewBox="0 0 10 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1.5 1L8.5 8L1.5 15"
-                    stroke="white"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
-            </div>
       </div>
     </div>
   );
