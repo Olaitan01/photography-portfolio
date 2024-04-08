@@ -40,8 +40,8 @@ function Faqs() {
       </div>
 
         <div >
-            {faqs.map(faq => 
-                <div key={faq.index} className="flex  justify-between items-center border-b-2 gap-2 border-lightDark p-4 ">
+            {faqs.map((faq,index) => 
+                <div key={index} className="flex  justify-between items-center border-b-2 gap-2 border-lightDark p-4 ">
                     <div >
                     <p className="text-lg text-primaryGrey w-80">{faq.question}</p>
                     <p className="hidden">{faq.answer}</p>

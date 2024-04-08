@@ -1,3 +1,7 @@
+import {Swiper,SwiperSlide} from "swiper/react";
+import {Navigation} from "swiper/modules"
+import "swiper/css";
+import "swiper/css/navigation";
 import rightArrow from "/src/assets/right-arrow.svg";
 import arrowTopRight from "/src/assets/arrow-top-right.png";
 import image1 from "/src/assets/about/Image (8).png";
@@ -47,8 +51,13 @@ function PortfolioSnippet(){
       </div>
 
         <div>
-           {works.map((work) =>
-            <div key={work.index} className="py-6">
+         <Swiper navigation={{
+          prevEl : '.prev',
+          nextEl: '.next',
+         }} modules={[Navigation]} loop ={true}>
+         {works.map((work) =>
+           <SwiperSlide key={work.index} className="mySwiper w-full py-6">
+             
                  <img src={work.photo} alt={work.alt}  className="object-cover max-w-full w-full"/>
             <div className="flex items-center justify-between">
                 <div>
@@ -59,11 +68,14 @@ function PortfolioSnippet(){
                     <button className="inline-flex items-center text-lg gap-2 border-b-2 border-lightDark">VIEW PROJECT <span><img src={arrowTopRight} alt="arrow top right" /></span></button>
                 </div>
             </div>
-            </div>
+            
+           </SwiperSlide>
            )}
+         </Swiper>
         </div>
+
         <div className="p-2 my-6 flex gap-4 items-center border-roundedGrey border-2 w-[40%] justify-center rounded-full m-auto">
-              <button className=" border-2 w-[60px] h-[60px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
+              <button className="prev border-2 w-[60px] h-[60px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
                 <svg
                   width="10"
                   height="16"
@@ -80,7 +92,7 @@ function PortfolioSnippet(){
                   />
                 </svg>
               </button>
-              <button className=" border-2 w-[60px] h-[60px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
+              <button className="next border-2 w-[60px] h-[60px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
                 <svg
                   width="10"
                   height="16"

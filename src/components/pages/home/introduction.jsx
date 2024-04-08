@@ -57,8 +57,8 @@ function Introduction() {
                 <p className="text-primaryGrey py-2">+00 000000000</p>
               </div>
               
-              <div className="py-4 px-2 my-6 flex gap-4 items-center border-roundedGrey border-2 w-[40%] justify-center rounded-full">
-                <span className=" border-2 w-[40px] h-[40px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
+              <div className="p-4 my-6 flex gap-2 items-center border-roundedGrey border-2 w-[40%] justify-center rounded-full">
+                <span className=" border-2 w-[30px] h-[30px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
                   <svg
                     width="16"
                     height="16"
@@ -79,7 +79,7 @@ function Introduction() {
                     </defs>
                   </svg>
                 </span>
-                <span className=" border-2 w-[40px] h-[40px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
+                <span className=" border-2 w-[30px] h-[30px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
                   <svg
                     width="16"
                     height="16"
@@ -100,7 +100,7 @@ function Introduction() {
                     </defs>
                   </svg>
                 </span>
-                <span className=" border-2 w-[40px] h-[40px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
+                <span className=" border-2 w-[30px] h-[30px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
                   <svg
                     width="16"
                     height="16"
