@@ -42,12 +42,12 @@ function Faqs() {
         <div >
             {faqs.map(faq => 
                 <div key={faq.index} className="flex  justify-between items-center border-b-2 gap-2 border-lightDark p-4 ">
-                    <div>
+                    <div >
                     <p className="text-lg text-primaryGrey w-80">{faq.question}</p>
                     <p className="hidden">{faq.answer}</p>
                     </div>
 
-                    <div className="w-10 h-10 rounded-[50%] flex justify-center border-2 border-lightDark">
+                    <div  className="w-10 h-10 rounded-[50%] flex justify-center border-2 border-lightDark">
                         <button ><img src={arrow} alt="Faq indicator arrow" className="max-w-full" /></button>
                     </div>
                 </div>
