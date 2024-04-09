@@ -1,6 +1,7 @@
 import arrowTopRight from "/src/assets/arrow-top-right.png";
 import glitter from "/src/assets/glitter.png";
 import heroImage from "/src/assets/about/Images Container.png"
+import mobileHero from "/src/assets/about/mobile-hero.png"
 // import image1 from "/src/assets/about/Image.png";
 // import image2 from "/src/assets/about/Image (1).png";
 // import image3 from "/src/assets/about/Image (2).png";
@@ -53,32 +54,9 @@ function Hero() {
       </div>
 
       <div className="m-auto px-2" >
-        <img src={heroImage} alt="grid creative photographed images" className="object-cover max-w-full w-full" />
+     {window.innerWidth < 768  ?  <img src={mobileHero } alt="grid creative photographed images" className="object-cover max-w-full w-full" /> : <img src={heroImage} alt="grid creative photographed images"/>}  
 
-        {/* <div className="flex flex-wrap relative h-[50vw] px-2 w-full gap-2">
-          <img
-            src={image1}
-            alt="hero model image"
-            className="object-cover w-[50%] h-40 "
-          />
-          <img src={image4} alt="hero model image" className="object-cover  " />
-          <img
-            src={image5}
-            alt="hero model image"
-            className="object-cover h-[50%] w-[15.5%]"
-          />
-          <img
-            src={image2}
-            alt="hero model image"
-            className="object-cover w-16  h-16 -translate-y-16"
-          />
-          <img
-            src={image3}
-            alt="hero model image"
-            className="object-cover  w-[45%] h-40 -translate-y-[10rem] "
-          />
-          <img src={image6} alt="hero model image" className="object-cover h-20 w-[14%] absolute right-4 top-[54%]" />
-        </div> */}
+
       </div>
     </div>
   );
