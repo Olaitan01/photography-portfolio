@@ -94,6 +94,7 @@ function PortfolioSnippet() {
            1024:{
             slidesPerView: 3,
             spaceBetween: 60,
+            loop:false
            }
           }}
           navigation={{
