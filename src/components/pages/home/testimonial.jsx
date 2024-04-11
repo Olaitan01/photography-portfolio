@@ -30,22 +30,30 @@ function Testimonial() {
 
   return (
     <div className=" pt-4 my-16 w-[90%] m-auto text-headerGrey">
-      <div className="border-b-2 border-lightDark pb-2">
-        <p className="text-grey text-sm font-semilight ">Testimonial</p>
-        <p className="text-headerGrey text-2xl font-semibold w-80">
+      <div className="border-b-2 border-lightDark lg:flex lg:justify-between lg:items-center lg:pb-8 lg:pt-20">
+       <div>
+       <p className="text-grey text-sm font-semilight lg:font-semibold ">
+        Testimonial</p>
+        <p className="text-headerGrey text-2xl font-semibold lg:text-4xl">
           WHAT MY CLIENTS SAY
         </p>
-
-        <div className="flex flex-col-reverse ">
-          <div className="pt-4">
+        <div className="pt-4 hidden lg:block">
             <p className="text-[0.7rem] text-primaryGrey font-thin">
               Total Reviews
             </p>
             <p className="text-[1rem] ">323</p>
           </div>
-          <div>
-            <div className="hidden  p-2 my-6 lg:flex gap-4 items-center border-roundedGrey border-2 w-[40%] justify-center rounded-full m-auto">
-              <button className=" border-2 w-[60px] h-[60px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
+       </div>
+        <div className="flex flex-col-reverse  ">
+          <div className="pt-4 lg:hidden">
+            <p className="text-[0.7rem] text-primaryGrey font-thin">
+              Total Reviews
+            </p>
+            <p className="text-[1rem] ">323</p>
+          </div>
+          <div className="lg:flex lg:gap-4 lg:items-center">
+          <div className="desktop-nav-btn hidden lg:flex  p-2 my-2 lg:my-0  gap-4  items-center border-roundedGrey border-2  lg:w-[45%] lg:p-1 justify-center rounded-full m-auto">
+          <button className="testimonialPrev border-2 w-[60px] lg:w-[50px] h-[60px] lg:h-[50px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
                 <svg
                   width="10"
                   height="16"
@@ -62,7 +70,7 @@ function Testimonial() {
                   />
                 </svg>
               </button>
-              <button className=" border-2 w-[60px] h-[60px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
+              <button className="testimonialNext border-2  w-[60px] lg:w-[50px] h-[60px] lg:h-[50px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
                 <svg
                   width="10"
                   height="16"
@@ -81,7 +89,7 @@ function Testimonial() {
               </button>
             </div>
             <div>
-              <button className="text-headerGrey text-sm inline-flex gap-2 bg-lightDark rounded-md p-4 my-2">
+            <button className="text-headerGrey text-sm inline-flex gap-2 bg-lightDark rounded-md p-4 lg:p-2 lg:py-4 lg:w-60 lg:justify-center my-6 lg:my-0">
                 View All Testimonials{" "}
                 <img src={rightArrowImage} alt="right arrow" />
               </button>
@@ -92,9 +100,18 @@ function Testimonial() {
 
       <div>
         <Swiper
-          slidesPerView={1}
+        slidesPerView={1}
+          breakpoints={
+            {
+              1024:{
+                slidesPerView:3,
+                spaceBetween:60,
+              }
+             
+            }
+          }
           // navigation={{ prevEl: prevButtonRef.current , nextEl: nextButtonRef, }}
-          navigation={{ prevEl: ".prev", nextEl: ".next" }}
+          navigation={{ prevEl: ".testimonialPrev", nextEl: ".testimonialNext" }}
           modules={[Navigation]}
           loop={true}
         >
@@ -188,9 +205,9 @@ function Testimonial() {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="p-2 my-6 flex gap-4 items-center border-roundedGrey border-2 w-[40%] justify-center rounded-full m-auto">
+        <div className="lg:hidden p-2 my-6 flex gap-4 items-center border-roundedGrey border-2 w-[40%] justify-center rounded-full m-auto">
           <button
-            className="prev border-2 w-[60px] h-[60px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark"
+            className="testimonialPrev border-2 w-[60px] h-[60px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark"
             // ref={prevButtonRef}
           >
             <svg
@@ -210,7 +227,7 @@ function Testimonial() {
             </svg>
           </button>
           <button
-            className="next border-2 w-[60px] h-[60px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark"
+            className="testimonialNext border-2 w-[60px] h-[60px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark"
             // ref={nextButtonRef}
           >
             <svg

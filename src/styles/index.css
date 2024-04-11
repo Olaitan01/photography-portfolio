@@ -11,6 +11,15 @@
   scroll-behavior: smooth;
 }
 
+.hero{
+  background-image: url(/src/assets/about/Clip\ path\ group.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size:18% ;
+}
+
+
+
 .servicesAnimation {
   animation: animateHorizontal 30s linear infinite;
 }
@@ -56,6 +65,12 @@
   
 } */
 
+@media screen and (max-width: 768px) {
+  .hero{
+    background-image: none;
+  }
+  
+}
 
 @keyframes animateHorizontal {
   0% {

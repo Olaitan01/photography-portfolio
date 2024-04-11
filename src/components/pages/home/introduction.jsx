@@ -4,27 +4,27 @@ import star from "/src/assets/star.png";
 function Introduction() {
   return (
     <div className=" pt-10 w-[90%] m-auto">
-      <div className="border-b-2 border-lightDark">
+      <div className="border-b-2 border-lightDark lg:flex lg:justify-between lg:items-center lg:py-6">
         <div>
-          <p className="text-grey text-sm font-semilight ">ABOUT</p>
-          <p className="text-headerGrey text-2xl font-semibold">I AM DAMIEN</p>
+          <p className="text-grey text-sm font-semilight lg:font-semibold">ABOUT</p>
+          <p className="text-headerGrey text-2xl font-semibold lg:text-4xl">I AM DAMIEN</p>
         </div>
         <div>
-          <button className="text-headerGrey text-sm inline-flex gap-2 bg-lightDark rounded-md p-4 my-6 ">
+          <button className="text-headerGrey text-sm inline-flex gap-2 bg-lightDark rounded-md p-4 my-6 lg:my-0 ">
             Know More <img src={rightArrow} alt="right arrow" />
           </button>
         </div>
       </div>
 
-      <div className="py-8 text-headerGrey">
+      <div className="py-8 text-headerGrey lg:flex lg:justify-between lg:items-center">
         <div>
           <img
             src={damienImg}
             alt="damien standing in a field in a white tees wearing a dark shades, looking to the right with hands crossed "
-            className="w-full"
+            className="w-full lg:max-w-full lg:h-[80vh]"
           />
         </div>
-        <div className="my-6  border-2 border-lightDark rounded-md text-primaryGrey">
+        <div className="my-6  border-2 border-lightDark rounded-md text-primaryGrey lg:w-[50%]">
           <div className="border-b-2 border-lightDark p-6">
             <h2 className="inline-flex items-center gap-4 text-xl ">
               <img src={star} alt="purple star" className="w-6" /> Introduction
@@ -39,15 +39,15 @@ function Introduction() {
               every frame is a piece of my heart.
             </p>
           </div>
-          <div className="p-6">
+          <div className="p-6 ">
             <h2 className="inline-flex items-center gap-4 text-xl ">
               <img src={star} alt="purple star" className="w-6" /> Contact
               Information
             </h2>
 
-            <div className="text-md">
+            <div className="text-md lg:flex lg:gap-x-[8em] lg:items-center lg:flex-wrap lg:py-8">
 
-              <div className="py-4">
+              <div className="py-4 ">
                 <p className=" text-headerGrey">Email</p>
                 <p className="text-primaryGrey py-2">damienbraun@gmail.com</p>
               </div>
@@ -57,7 +57,7 @@ function Introduction() {
                 <p className="text-primaryGrey py-2">+00 000000000</p>
               </div>
               
-              <div className="p-4 my-6 flex gap-2 items-center border-roundedGrey border-2 w-[40%] justify-center rounded-full">
+              <div className="p-4 my-6 flex gap-2 items-center border-roundedGrey border-2 w-[40%] justify-center rounded-full lg:w-[21%] lg:p-2 l lg:my-0">
                 <span className=" border-2 w-[30px] h-[30px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
                   <svg
                     width="16"
@@ -122,9 +122,9 @@ function Introduction() {
                   </svg>
                 </span>
               </div>
-              <div className="text-md font-medium text-headerGrey text-center gap-4 flex flex-wrap lg:flex-nowrap" >
-                <button className="inline-block border-2 border-roundedGrey w-full py-4 rounded-md bg-lightDark">Let&apos;s Work</button>
-                <button className="inline-block border-2 border-roundedGrey w-full py-4 rounded-md bg-lightDark">Download CV</button>
+              <div className="text-md font-medium text-headerGrey text-center gap-4 flex flex-wrap lg:flex-nowrap " >
+                <button className="inline-block border-2 border-roundedGrey w-full py-4 lg:p-2 lg:w-40 rounded-md bg-lightDark ">Let&apos;s Work</button>
+                <button className="inline-block border-2 border-roundedGrey w-full py-4 lg:p-2 lg:w-40 rounded-md bg-lightDark">Download CV</button>
               </div>
             </div>
           </div>

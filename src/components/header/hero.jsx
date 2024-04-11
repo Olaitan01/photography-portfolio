@@ -1,32 +1,41 @@
+import { useState, useEffect } from "react";
 import arrowTopRight from "/src/assets/arrow-top-right.png";
 import glitter from "/src/assets/glitter.png";
-import heroImage from "/src/assets/about/Images Container.png"
-import mobileHero from "/src/assets/about/mobile-hero.png"
-// import image1 from "/src/assets/about/Image.png";
-// import image2 from "/src/assets/about/Image (1).png";
-// import image3 from "/src/assets/about/Image (2).png";
-// import image4 from "/src/assets/about/mobile/Image (15).png";
-// import image5 from "/src/assets/about/mobile/Image (13).png";
-// import image6 from "/src/assets/about/mobile/Image (14).png";
+import heroImage from "/src/assets/about/Images Container.png";
+import mobileHero from "/src/assets/about/mobile-hero.png";
 
 function Hero() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < 768);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <div className="overflow-x-hidden">
-      <div className=" text-headerGrey px-4 py-10 ">
+    <div className="overflow-x-hidden hero lg:pb-20">
+      <div className=" text-headerGrey  py-10 w-[90%] m-auto lg:flex lg:justify-between lg:items-center lg:pb-24">
         <div>
           <p className=" text-lg font-semilight text-grey">
             STUNNING PHOTOGRAPHY BY
           </p>
-          <h1 className="text-4xl font-bold">DAMIEN BRAUN</h1>
+          <h1 className="text-4xl font-semibold lg:text-[4rem] lg:pt-8">
+            DAMIEN BRAUN
+          </h1>
         </div>
-        <div className="pt-6">
-          <p className="flex gap-4 items-center font-semibold text-2xl ">
+        <div className="pt-6 lg:pt-0 ">
+          <p className="flex gap-4 items-center font-semibold text-2xl lg:text-4xl ">
             LET&apos;S{" "}
             <span className=" bg-royalBlue py-4 px-8 rounded-full">
               <img src={arrowTopRight} alt="arrow facing 120 degree" />
             </span>{" "}
           </p>
-          <p className="font-semibold text-2xl ">WORK TOGETHER</p>
+          <p className="font-semibold text-2xl lg:text-4xl">WORK TOGETHER</p>
         </div>
       </div>
       <div className="servicesAnimation text-xLightPurple text-sm font-light flex items-center justify-between overflow-x-hidden  w-[250%] border-t-[0.5px] border-b-[0.5px] border-t-lightDark border-b-lightDark py-2 bg-serviceBg">
@@ -53,10 +62,20 @@ function Hero() {
         <span className="inline-block">PORTRAIGHT PHOTOGRAPHY</span>
       </div>
 
-      <div className="m-auto px-2" >
-     {window.innerWidth < 768  ?  <img src={mobileHero } alt="grid creative photographed images" className="object-cover max-w-full w-full" /> : <img src={heroImage} alt="grid creative photographed images"/>}  
-
-
+      <div className="m-auto px-2 lg:px-20">
+        {isMobile ? (
+          <img
+            src={mobileHero}
+            alt="grid creative photographed images "
+            className="object-cover max-w-full w-full"
+          />
+        ) : (
+          <img
+            src={heroImage}
+            alt="grid creative photographed images "
+            className="object-cover max-w-full w-full"
+          />
+        )}
       </div>
     </div>
   );
