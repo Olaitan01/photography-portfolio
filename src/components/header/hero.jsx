@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Marquee from "react-fast-marquee";
 import arrowTopRight from "/src/assets/arrow-top-right.png";
 import glitter from "/src/assets/glitter.png";
 import heroImage from "/src/assets/about/Images Container.png";
@@ -38,9 +39,9 @@ function Hero() {
           <p className="font-semibold text-2xl lg:text-4xl">WORK TOGETHER</p>
         </div>
       </div>
-      <div className="servicesAnimation text-xLightPurple text-sm font-light flex items-center justify-between overflow-x-hidden  w-[250%] border-t-[0.5px] border-b-[0.5px] border-t-lightDark border-b-lightDark py-2 bg-serviceBg">
-        <span className="inline-block">EVENT PHOTOGRAPHY</span>
-        <span className="inline-block">
+      <Marquee autoFill className=" servicesAnimation text-xLightPurple text-sm font-light flex items-center justify-between overflow-x-hidden  w-full   border-t-[0.5px] border-b-[0.5px] border-t-lightDark border-b-lightDark py-2 bg-serviceBg">
+        <span className="inline-block ">EVENT PHOTOGRAPHY</span>
+        <span className="block ">
           <img src={glitter} alt="purple glitter icon" />
         </span>
         <span className="inline-block">COMMERCIAL PHOTOGRPAHY</span>
@@ -60,7 +61,7 @@ function Hero() {
           <img src={glitter} alt="purple glitter icon" />
         </span>
         <span className="inline-block">PORTRAIGHT PHOTOGRAPHY</span>
-      </div>
+      </Marquee>
 
       <div className="m-auto px-2 lg:px-20">
         {isMobile ? (

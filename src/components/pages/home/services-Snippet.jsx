@@ -107,10 +107,10 @@ function ServicesSnippet() {
         >
           {serviceHighlights.map((highLight, index) => (
             <SwiperSlide
-              className="text-grey mySwiper lg:flex lg:flex-row-reverse lg:justify-between lg:items-center lg:py-6  "
+              className="text-grey mySwiper lg:flex lg:flex-row-reverse lg:justify-between lg:items-center lg:py-6 sm:py-4  "
               key={index}
             >
-              <div>
+              <div className="py-8 lg:py-0">
                 <img
                   src={serviceImage}
                   alt="an artist on a foggy stage at a concert"
@@ -157,7 +157,7 @@ function ServicesSnippet() {
           ))}
         </Swiper>
 
-        <div className="lg:hidden p-2 my-2 flex gap-4 items-center border-roundedGrey border-2 w-[40%] justify-center rounded-full m-auto">
+        <div className="lg:hidden p-2 my-2 sm:mb-6 flex gap-4 items-center border-roundedGrey border-2 max-w-[50%] sm:max-w-[30%]  justify-center rounded-full m-auto ">
           <button className="prev border-2 w-[60px] h-[60px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
             <svg
               width="10"

@@ -34,7 +34,7 @@ function PortfolioSnippet() {
   ];
 
   return (
-    <div className=" pt-4 lg:pb-20  w-[90%] m-auto text-headerGrey">
+    <div className=" pt-4 lg:pt-0 lg:pb-20  w-[90%] m-auto text-headerGrey">
       <div className="border-b-2 border-lightDark lg:flex lg:justify-between lg:items-center lg:pb-8 lg:pt-20">
         <div>
           <p className="text-grey text-sm font-semilight lg:font-semibold ">

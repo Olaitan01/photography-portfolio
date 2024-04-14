@@ -1,3 +1,4 @@
+import Marquee from "react-fast-marquee";
 import glitter from "/src/assets/glitter.png";
 import arrowTopRight from "/src/assets/arrow-top-right.png";
 
@@ -6,7 +7,7 @@ function Footer() {
     <div className="pt-20 text-headerGrey overflow-x-hidden">
 
       <p className="text-lightDark text-7xl text-right font-bold p-2 lg:text-[12rem] lg:font-semibold lg:pr-20 lg:pb-10">DAMIEN</p>
-      <div className="servicesAnimation text-xLightPurple text-sm font-light flex items-center justify-between overflow-x-hidden  w-[250%] border-t-[0.5px] border-b-[0.5px] border-t-lightDark border-b-lightDark py-2 bg-serviceBg">
+      <Marquee autoFill className=" servicesAnimation text-xLightPurple text-sm font-light flex items-center justify-between overflow-x-hidden  w-full   border-t-[0.5px] border-b-[0.5px] border-t-lightDark border-b-lightDark py-2 bg-serviceBg">
         <span className="inline-block">EVENT PHOTOGRAPHY</span>
         <span className="inline-block">
           <img src={glitter} alt="purple glitter icon" />
@@ -28,7 +29,7 @@ function Footer() {
           <img src={glitter} alt="purple glitter icon" />
         </span>
         <span className="inline-block">PORTRAIGHT PHOTOGRAPHY</span>
-      </div>
+      </Marquee>
 
     <div className="mx-6 lg:mx-20">
     <div className="border-r-2 border-l-2 border-lightDark  ">

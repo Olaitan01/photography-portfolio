@@ -58,8 +58,10 @@ useEffect(()=>{
   function toggleQuestion(index){
     if (openIndexes.includes(index)) {
       setOpenIndexes(openIndexes.filter((item) => item !== index));
+     
     } else {
       setOpenIndexes([...openIndexes, index]);
+      
     }
   }
    
@@ -81,15 +83,13 @@ useEffect(()=>{
         {faqs.slice(0, isMobileFaq).map((faq, index) => (
           <div key={index} className="flex justify-between items-center  " >
             
-             <div
-            className="flex  justify-between items-start border-b-2 gap-2 border-lightDark p-4 w-full lg:border-r-2 lg:border-lightDark "
+             <div  onClick={() => toggleQuestion(index)}
+            className="flex  justify-between items-start border-b-2 gap-2 border-lightDark p-4 w-full lg:border-r-2 lg:border-lightDark cursor-pointer"
           >
-            <div>
+            <div >
               <p className="text-lg text-primaryGrey w-80 lg:w-full">{faq.question}</p>
               {openIndexes.includes(index) && (
-              <p className={`overflow-hidden transition-height duration-500 text-[1rem] text-grey font-normal ${
-                openIndexes.includes(index) ? 'h-auto' : 'h-0'
-              }`}>{faq.answer}</p>
+              <p className="answer overflow-hidden  transition-all duration-100 text-[1rem] text-grey font-normal " style={{ height: openIndexes.includes(index) ? '5vh'   : '0vh' }}>{faq.answer}</p>
 
 
             )}
@@ -98,7 +98,7 @@ useEffect(()=>{
             <div>
               <button
                 className="w-10 h-10 rounded-full flex justify-center items-center border-2 border-lightDark"
-                onClick={() => toggleQuestion(index)}
+               
               >
                 <img src={arrow} alt="Faq indicator arrow"  className={`transform transition-transform duration-500 ${openIndexes.includes(index) ? 'rotate-190' : 'rotate-180'}`} />
               </button>

@@ -65,6 +65,13 @@
   
 } */
 
+.answer{
+height: 0vh;
+  transition: height 5s ease-in-out;
+}
+
+
+
 @media screen and (max-width: 768px) {
   .hero{
     background-image: none;
@@ -72,11 +79,11 @@
   
 }
 
-@keyframes animateHorizontal {
+/* @keyframes animateHorizontal {
   0% {
     transform: translateX(10%);
   }
   100% {
     transform: translateX(-100%);
   }
-}
+} */
