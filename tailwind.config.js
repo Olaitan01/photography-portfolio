@@ -16,7 +16,7 @@ export default {
       serviceBg: "rgb(14,14,16)",
       primaryGrey:"rgb(182,182,186)",
       roundedGrey:"rgb(42,42,49)",
-      
+      textGrey:"rgb(114,116,126)"
     },
     extend: {
       fontFamily:{

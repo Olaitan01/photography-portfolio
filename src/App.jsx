@@ -1,7 +1,6 @@
 import {Routes, Route } from "react-router-dom";
 import { appRoutes } from "./appRoutes";
-import Header from './components/header/header'
-
+import Header from './components/header'
 
 function App() {
   return (

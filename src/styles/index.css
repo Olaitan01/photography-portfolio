@@ -11,6 +11,10 @@
   scroll-behavior: smooth;
 }
 
+body{
+  color:rgb(228,228,230) ;
+}
+
 .hero{
   background-image: url(/src/assets/about/Clip\ path\ group.png);
   background-repeat: no-repeat;
