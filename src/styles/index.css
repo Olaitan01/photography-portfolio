@@ -4,57 +4,54 @@
 @import "tailwindcss/utilities";
 @import url("https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100&family=IBM+Plex+Mono:wght@100;400;600;700&family=Manrope:wght@200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
-*::after,*::before , *{
+*::after,
+*::before,
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
-body{
-  color:rgb(228,228,230) ;
+body {
+  color: rgb(228, 228, 230);
 }
 
-.hero{
+.hero {
   background-image: url(/src/assets/about/Clip\ path\ group.png);
   background-repeat: no-repeat;
   background-position: top;
-  background-size:18% ;
+  background-size: 18%;
 }
-
-
 
 .servicesAnimation {
   animation: animateHorizontal 30s linear infinite;
 }
 
-
-
-.testimonialCard{
+.testimonialCard {
   background-image: url(../assets/testimonial-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.footerSerivce{
-  color: rgb(93,95,103);
+.footerSerivce {
+  color: rgb(93, 95, 103);
   font-weight: 500;
   display: flex;
   flex-wrap: wrap;
-  font-size: .8rem;
-  
+  font-size: 0.8rem;
 }
 
-.footerListContainer{
+.footerListContainer {
   display: flex;
   flex-direction: column;
 }
 
-.footerList{
-  font-size: .8rem;
-  padding: .5em 0;
-  position: relative; 
-  text-decoration: rgb(93,95,103) underline ;
+.footerList {
+  font-size: 0.8rem;
+  padding: 0.5em 0;
+  position: relative;
+  text-decoration: rgb(93, 95, 103) underline;
   text-decoration-thickness: 0.5;
 }
 
@@ -69,18 +66,15 @@ body{
   
 } */
 
-.answer{
-height: 0vh;
+.answer {
+  height: 0vh;
   transition: height 5s ease-in-out;
 }
 
-
-
 @media screen and (max-width: 768px) {
-  .hero{
+  .hero {
     background-image: none;
   }
-  
 }
 
 /* @keyframes animateHorizontal {
@@ -91,3 +85,11 @@ height: 0vh;
     transform: translateX(-100%);
   }
 } */
+
+/*about styling*/
+
+.timeline-box {
+  background-image: url(/src/assets/testimonial-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}

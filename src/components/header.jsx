@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import logo from "/src/assets/Logo.png";
 import openIcon from "/src/assets/openMenu.png";
 function Header() {
@@ -10,14 +11,29 @@ function Header() {
           </div>
           <div className="hidden  lg:block border-t-2 border-x-2  border-lightDark rounded-t-md">
             <ul className="flex items-center   lg:text-sm lg:text-grey lg:font-semibold">
-              <li className="border-r-2 border-lightDark p-8  cursor-pointer hover:bg-lightDark hover:text-headerGrey ">
-                <a href="#">Home</a>
+              <li>
+                <NavLink
+                  to="/"
+                  className="border-r-2 border-lightDark p-8  cursor-pointer hover:bg-lightDark hover:text-headerGrey "
+                >
+                  Home
+                </NavLink>
               </li>
-              <li className="border-r-2 border-lightDark px-6 py-8 cursor-pointer  hover:bg-lightDark hover:text-headerGrey ">
-                <a href="#">About Me</a>
+              <li>
+                <NavLink
+                  to="/about"
+                  className="border-r-2 border-lightDark px-6 py-8 cursor-pointer  hover:bg-lightDark hover:text-headerGrey "
+                >
+                  About Me
+                </NavLink>
               </li>
-              <li className="border-r-2 border-lightDark px-6 py-8 cursor-pointer  hover:bg-lightDark hover:text-headerGrey ">
-                <a href="#">Portfolio</a>
+              <li>
+                <NavLink
+                  to="/portfolio"
+                  className="border-r-2 border-lightDark px-6 py-8 cursor-pointer  hover:bg-lightDark hover:text-headerGrey "
+                >
+                  Portfolio
+                </NavLink>
               </li>
               <li className="px-6 py-8 cursor-pointer  hover:bg-lightDark hover:text-headerGrey ">
                 <a href="#">Services</a>
