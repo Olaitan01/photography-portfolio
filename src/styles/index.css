@@ -66,10 +66,7 @@ body {
   
 } */
 
-.answer {
-  height: 0vh;
-  transition: height 5s ease-in-out;
-}
+
 
 @media screen and (max-width: 768px) {
   .hero {
@@ -92,4 +89,13 @@ body {
   background-image: url(/src/assets/testimonial-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+
+.serviceText{
+  left: 20em !important;
+}
+
+.serviceParagraph{
+  width: 100% !important;
 }

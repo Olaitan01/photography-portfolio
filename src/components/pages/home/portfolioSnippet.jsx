@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
@@ -82,7 +83,7 @@ function PortfolioSnippet() {
             </button>
           </div>
           <button className="text-headerGrey text-sm inline-flex gap-2 bg-lightDark rounded-md p-4 lg:p-2 lg:py-4 lg:w-40 lg:justify-center my-6 lg:my-0">
-            View All Works <img src={rightArrow} alt="right arrow" />
+           <NavLink to="/portfolio">View All Works</NavLink>  <img src={rightArrow} alt="right arrow" />
           </button>
         </div>
       </div>

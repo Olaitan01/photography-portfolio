@@ -42,7 +42,7 @@ function Portfolio() {
 
         <Marquee
           autoFill
-          className="bg-lightDark p-4 flex items-center justify-center gap-4 w-full my-4"
+          className="bg-lightDark p-4 flex items-center justify-between w-full my-4"
         >
           <div>
             <img

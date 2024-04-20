@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import rightArrow from "/src/assets/right-arrow.svg";
 import damienImg from "/src/assets/about/Image (6).png";
 import star from "/src/assets/star.png";
@@ -11,7 +12,7 @@ function Introduction() {
         </div>
         <div>
           <button className="text-headerGrey text-sm inline-flex gap-2 bg-lightDark rounded-md p-4 my-6 lg:my-0 ">
-            Know More <img src={rightArrow} alt="right arrow" />
+         <NavLink to="/about">Know More</NavLink> <img src={rightArrow} alt="right arrow" />
           </button>
         </div>
       </div>

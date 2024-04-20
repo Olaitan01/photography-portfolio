@@ -9,7 +9,7 @@ import arrowTopRight from "/src/assets/arrow-top-right.png";
 const PortfolioProjects = (prop) => {
   return (
     <div className=" pt-4 lg:pt-0 lg:pb-20  w-[90%] m-auto text-headerGrey">
-      <div className="border-b-2 border-lightDark lg:flex lg:justify-between lg:items-center lg:pb-8 lg:pt-20">
+      <div className="border-t-2 border-lightDark lg:flex lg:justify-between lg:items-center lg:pb-8 lg:pt-20 pt-8">
         <div>
           <p className="text-grey text-sm font-semilight lg:font-semibold ">
             {prop.serviceType}
@@ -20,9 +20,9 @@ const PortfolioProjects = (prop) => {
         </div>
         <div className="lg:flex lg:gap-4 lg:items-center">
           <div
-            className={`${prop.prevBtn} hidden lg:flex  p-2 my-2 lg:my-0  gap-4  items-center border-roundedGrey border-2  lg:w-[100%] lg:p-1 justify-center rounded-full m-auto`}
+            className={` hidden lg:flex  p-2 my-2 lg:my-0  gap-4  items-center border-roundedGrey border-2  lg:w-[100%] lg:p-1 justify-center rounded-full m-auto`}
           >
-            <button className="photographyPrev border-2 w-[60px] lg:w-[50px] h-[60px] lg:h-[50px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
+            <button className={`${prop.prevBtn} border-2 w-[60px] lg:w-[50px] h-[60px] lg:h-[50px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark`}>
               <svg
                 width="10"
                 height="16"

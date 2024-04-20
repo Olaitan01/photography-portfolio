@@ -35,9 +35,12 @@ function Header() {
                   Portfolio
                 </NavLink>
               </li>
-              <li className="px-6 py-8 cursor-pointer  hover:bg-lightDark hover:text-headerGrey ">
-                <a href="#">Services</a>
-              </li>
+              <NavLink
+                to="/services"
+                className="px-6 py-8 cursor-pointer  hover:bg-lightDark hover:text-headerGrey "
+              >
+                Services
+              </NavLink>
             </ul>
           </div>
           <div className="border-l-2 border-t-2  border-lightDark p-4 rounded-tl-[1rem] lg:border-0">

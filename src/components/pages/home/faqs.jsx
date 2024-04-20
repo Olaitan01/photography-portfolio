@@ -89,7 +89,7 @@ useEffect(()=>{
             <div >
               <p className="text-lg text-primaryGrey w-80 lg:w-full">{faq.question}</p>
               {openIndexes.includes(index) && (
-              <p className="answer overflow-hidden  transition-all duration-100 text-[1rem] text-grey font-normal " style={{ height: openIndexes.includes(index) ? '5vh'   : '0vh' }}>{faq.answer}</p>
+              <p className="answer overflow-hidden  transition-all duration-100 text-[1rem] text-grey font-normal " >{faq.answer}</p>
 
 
             )}
