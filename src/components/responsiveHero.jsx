@@ -49,7 +49,9 @@ const ResponsiveHeroImg = (prop) => {
             </div>
           </div>
 
-          <div className={`${prop.serviceclass} sm:absolute sm:top-[8.25em] lg:top-14` }>
+          <div
+            className={`${prop.serviceclass} sm:absolute sm:top-[8.25em] lg:top-14`}
+          >
             <p className="text-[1rem] font-normal text-grey lg:font-extrabold">
               {prop.header}
             </p>
@@ -58,8 +60,10 @@ const ResponsiveHeroImg = (prop) => {
             </p>
             <div className="flex justify-between flex-wrap m-auto  items-stretch  border-lightDark border-b-2 sm:border-0 py-6 sm:py-4 pb-10 sm:gap-2 lg:gap-4">
               <div>
-                <div className={`${prop.serviceparagraph} text-center lg:text-left  lg:w-[70%]`}  >
-                  <p className="text-[0.7rem] sm:text-[0.4rem] lg:text-[1rem] font-normal text-textGrey">
+                <div
+                  className={`${prop.serviceparagraph} text-center lg:text-left  lg:w-[70%]`}
+                >
+                  <p className="text-[0.8rem] sm:text-[0.4rem] lg:text-[1rem] font-normal text-textGrey text-left">
                     {prop.paragraph}
                   </p>
                 </div>

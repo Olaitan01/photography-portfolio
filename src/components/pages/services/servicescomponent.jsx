@@ -1,8 +1,6 @@
 import arrow from "/src/assets/arrow-top-right.png";
 import darkGlitter from "/src/assets/dark-glitter.png";
 
-
-
 const Servicescomponent = (prop) => {
   // const serviceSession = [
   //   {
@@ -36,11 +34,11 @@ const Servicescomponent = (prop) => {
 
   return (
     <div className="w-[90%] m-auto text-textGrey ">
-      <div className="flex flex-col sm:flex-row justify-between items-center border-t-2 border-lightDark pt-16 pb-20">
-        <div>
+      <div className="flex flex-col sm:flex-row justify-between items-center border-t-2 border-lightDark py-6 sm:pt-16 sm:pb-20">
+        <div className="py-4">
           <p className="font-semibold ">{prop.serviceType}</p>
-          <p className="text-sm font-normal sm:w-[80%] sm:py-8">
-         {prop.serviceDetails}
+          <p className="text-sm font-normal sm:w-[80%] py-4 sm:py-8">
+            {prop.serviceDetails}
           </p>
           <button className="flex items-center gap-2 text-headerGrey text-sm cursor-pointer">
             VIEW PROJECTS{" "}
@@ -53,7 +51,7 @@ const Servicescomponent = (prop) => {
             alt="A portrait image of a blonde lady"
             className="w-full max-w-full object-cover"
           />
-          <div className=" p-1 flex gap-2 items-center border-roundedGrey border-2 w-[16%] justify-center rounded-full m-auto -translate-y-8">
+          <div className=" p-1 flex gap-2 items-center border-roundedGrey border-2 w-[28%] sm:w-[16%] justify-center rounded-full m-auto -translate-y-4 sm:-translate-y-8">
             <button
               className={`${prop.prevBtn} border-2 w-[50px] h-[50px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark`}
             >
@@ -96,19 +94,20 @@ const Servicescomponent = (prop) => {
         </div>
       </div>
 
-      <div className="">
-        <div className="  justify-between items-center ">
+      <div>
+        <div>
           {prop.serviceSession.map((service, index) => (
-            <div key={index} >
-              <div className="flex flex-col sm:flex-row justify-between items-center py-8 text-headerGrey border-t-2 border-lightDark">
-
-                <div>
-                  <p className="text-[0.8rem] font-normal">
+            <div key={index}>
+              <div className="flex  flex-col sm:flex-row justify-between items-center py-8 text-headerGrey border-t-2 border-lightDark">
+                <div className="flex flex-col w-full py-4">
+                  <p className="text-[0.8rem] font-normal py-2 sm:py-0">
                     {service.sessionTitle}
                   </p>
 
                   <div className="flex items-center gap-4 justify-between sm:justify-normal">
-                    <p className="text-4xl font-normal">{service.amount}</p>
+                    <p className="text-4xl font-normal w-40">
+                      {service.amount}
+                    </p>
                     <button className=" flex  items-center gap-2 text-headerGrey text-[0.8rem] cursor-pointer border-b-2 border-lightDark pb-1">
                       BOOK A CALL{" "}
                       <img
@@ -120,10 +119,10 @@ const Servicescomponent = (prop) => {
                   </div>
                 </div>
 
-                <div className="sm:w-[70%]">
+                <div className="sm:w-[200em]">
                   {service.details.map((detail, index) => (
                     <div key={index} className="sm:w-[100%]">
-                      <div className="inline-flex items-center gap-4 my-2 text-xl text-headerGrey lg:text-sm font-thin border-2 border-lightDark rounded-md p-4 w-full">
+                      <div className=" inline-flex items-center gap-4 my-2 text-[1rem] sm:text-xl  text-headerGrey lg:text-sm font-thin border-2 border-lightDark rounded-md p-4 w-full">
                         <img
                           src={darkGlitter}
                           alt="dark glitter"

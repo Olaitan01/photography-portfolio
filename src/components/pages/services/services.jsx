@@ -56,7 +56,7 @@ function Services() {
           },
         ]}
       />
-       <Servicescomponent
+      <Servicescomponent
         serviceType="EVENTS PHOTOGRAPHY"
         serviceDetails="Our event photography service is dedicated to capturing the magic of your special occasions. Whether it's a wedding, corporate event, or milestone celebration, we're there to document every heartfelt moment. We blend into the background, ensuring natural and candid shots that reflect the emotions of the day."
         img={image32}
@@ -85,12 +85,11 @@ function Services() {
             details: [
               "Tailored solutions for corporate gatherings, conferences, and seminars.",
               "Contact us for a personalized quote based on your event's requirements.",
-
             ],
           },
         ]}
       />
- <Servicescomponent
+      <Servicescomponent
         serviceType="COMMERCIAL PHOTOGRAPHY"
         serviceDetails="In the world of business, a compelling image can make all the difference. Our commercial photography service is designed to enhance your brand's visual identity. We create striking images for your products, services, and marketing campaigns that leave a lasting impact on your audience."
         img={image33}
@@ -123,8 +122,8 @@ function Services() {
           },
         ]}
       />
-  <Faqs/>
-  <Footer/>
+      <Faqs />
+      <Footer />
     </>
   );
 }
