@@ -50,7 +50,7 @@ const ResponsiveHeroImg = (prop) => {
           </div>
 
           <div
-            className={`${prop.socialClass}  sm:absolute sm:top-[7.5em] sm:right-0 p-2 hidden gap-2 items-center border-roundedGrey border-2 w-[40%] lg:w-[12%] justify-center rounded-full m-auto lg:m-0 -translate-y-12`}
+            className={`${prop.socialClass}  sm:absolute sm:top-[10.5em] sm:right-0 p-2 hidden gap-2 items-center border-roundedGrey border-2 w-[40%] lg:w-[12%] justify-center rounded-full m-auto lg:m-0 -translate-y-12`}
           >
             <span className=" border-2 w-[40px] h-[40px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
               <svg

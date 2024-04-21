@@ -21,7 +21,7 @@ function Contact() {
       />
 
       <div className="text-textGrey w-[90%] m-auto">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:gap-8 sm:border-t-2  border-lightDark sm:py-6 py-4">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:gap-8 sm:border-t-2  border-lightDark sm:py-8 py-4">
           <div className=" sm:w-[30em]">
             <p className="sm:text-4xl text-2xl font-semibold sm:py-4 py-2">CONTACT INFORMATION</p>
             <p className="text-[.9rem] font-light sm:w-[90%] ">
