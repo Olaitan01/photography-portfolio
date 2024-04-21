@@ -44,8 +44,8 @@ function Header() {
             </ul>
           </div>
           <div className="border-l-2 border-t-2  border-lightDark p-4 rounded-tl-[1rem] lg:border-0">
-            <button className="hidden lg:block lg:border-2-solid lg:bg-lightDark p-4 rounded-lg">
-              Contact Me
+            <button >
+            <NavLink to= "/contact" className="hidden lg:block lg:border-2-solid lg:bg-lightDark p-4 rounded-lg">Contact Me</NavLink>
             </button>
             <button className=" lg:hidden">
               <img src={openIcon} alt="open and close icons" />

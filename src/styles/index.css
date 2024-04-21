@@ -99,3 +99,17 @@ body {
 .serviceParagraph{
   width: 100% !important;
 }
+
+.star{
+  display: none;
+}
+
+.contactText{
+  top: 14em !important;
+  width: 90% !important;
+  left: 1em !important;
+}
+
+.socials{
+  display: flex !important;
+}
