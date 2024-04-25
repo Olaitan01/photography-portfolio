@@ -91,6 +91,7 @@ function PortfolioSnippet() {
       <div>
         <Swiper
         slidesPerView={1}
+        spaceBetween={30}
           breakpoints={{
            1024:{
             slidesPerView: 3,
@@ -131,7 +132,7 @@ function PortfolioSnippet() {
         </Swiper>
       </div>
 
-      <div className="lg:hidden p-2 my-6 flex gap-4 items-center border-roundedGrey border-2 w-[40%] justify-center rounded-full m-auto">
+      <div className="lg:hidden p-2 my-6 flex gap-4 items-center border-roundedGrey border-2 w-40 sm:max-w-[25%] justify-center rounded-full m-auto">
         <button className="photographyPrev border-2 w-[60px] h-[60px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
           <svg
             width="10"

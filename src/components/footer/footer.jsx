@@ -1,6 +1,7 @@
 import Marquee from "react-fast-marquee";
 import glitter from "/src/assets/glitter.png";
 import arrowTopRight from "/src/assets/arrow-top-right.png";
+import { NavLink } from "react-router-dom";
 
 function Footer() {
   return (
@@ -57,9 +58,9 @@ function Footer() {
               <div >
                 <p className="footerSerivce">HOME</p>
                 <ul className="footerListContainer">
-                    <li className="footerList ">ABOUT ME</li>
-                    <li className="footerList ">MY WORKS</li>
-                    <li className="footerList">TESTIMONIALS</li>
+                    <NavLink to="/contact" className="footerList ">ABOUT ME</NavLink>
+                    <NavLink  className="footerList ">MY WORKS</NavLink>
+                    <NavLink className="footerList">TESTIMONIALS</NavLink>
                 </ul>
                </div>
 
@@ -100,7 +101,7 @@ function Footer() {
         </div>
         <div className="text-sm py-8 font-normal text-grey text-center border-t-2 border-lightDark lg:flex lg:justify-between lg:items-center lg:">
                     <p className="">Terms & Condition | Privacy Policy</p>
-                    <div className="p-2 hidden  lg:flex gap-2 items-center border-roundedGrey border-2 w-[40%] lg:w-[12%] justify-center rounded-full m-auto lg:m-0">
+                    <div className="p-2 hidden  lg:flex gap-2 items-center border-roundedGrey border-2 max-w-[20%] mobile:max-w-[50%] lg:w-[12%] justify-center rounded-full m-auto lg:m-0">
                 <span className=" border-2 w-[40px] h-[40px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
                   <svg
                     width="16"
@@ -166,7 +167,7 @@ function Footer() {
                 </span>
               </div>
                     <p className="py-4">&copy; {new Date().getFullYear()} Damien Braun Photography. All rights reserved.</p>
-                    <div className="lg:hidden p-2  flex gap-2 items-center border-roundedGrey border-2 w-[40%] lg:w-[12%] justify-center rounded-full m-auto lg:m-0">
+                    <div className="lg:hidden p-2  flex gap-2 items-center border-roundedGrey border-2 max-w-[20%] mobile:max-w-[50%] lg:w-[12%] justify-center rounded-full m-auto lg:m-0">
                 <span className=" border-2 w-[40px] h-[40px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
                   <svg
                     width="16"

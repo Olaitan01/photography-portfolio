@@ -157,7 +157,7 @@ function ServicesSnippet() {
           ))}
         </Swiper>
 
-        <div className="lg:hidden p-2 my-2 sm:mb-6 flex gap-4 items-center border-roundedGrey border-2 max-w-[50%] sm:max-w-[30%]  justify-center rounded-full m-auto ">
+        <div className="lg:hidden p-2 my-6 flex gap-4 items-center border-roundedGrey border-2 w-40 sm:max-w-[25%] justify-center rounded-full m-auto ">
           <button className="prev border-2 w-[60px] h-[60px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
             <svg
               width="10"

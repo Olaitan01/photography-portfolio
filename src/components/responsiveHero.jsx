@@ -6,7 +6,7 @@ const ResponsiveHeroImg = (prop) => {
 
   useEffect(() => {
     function isResponsive() {
-      setIsMobile(window.innerWidth < 640);
+      setIsMobile(window.innerWidth < 439);
     }
 
     window.addEventListener("resize", isResponsive);
@@ -34,7 +34,7 @@ const ResponsiveHeroImg = (prop) => {
             )}
           </div>
 
-          <div className="hidden  sm:flex sm:justify-between sm:items-center sm:absolute lg:bottom-20 sm:bottom-[13rem]  sm:w-[90%] lg:w-full ">
+          <div className="hidden  sm:flex sm:justify-between sm:items-center sm:absolute lg:bottom-20 sm:bottom-[13rem] tablet:top-[10em] tablet:right-4 sm:w-[90%] lg:w-full ipadmini:hidden ">
             <div>
               <img
                 src={prop.herostar}
@@ -43,14 +43,14 @@ const ResponsiveHeroImg = (prop) => {
               />
             </div>
             <div>
-              <p className="text-[0.8rem] sm:text-[0.6rem] lg:text-[0.8rem] text-textGrey lg:w-40 sm:w-20">
+              <p className="text-[0.8rem] sm:text-[0.6rem] tablet:text-[1rem] lg:text-[0.8rem] text-textGrey lg:w-40 sm:w-20 tablet:w-40">
                 SCROLL DOWN TO SEE THE WORK
               </p>
             </div>
           </div>
 
           <div
-            className={`${prop.socialClass}  sm:absolute sm:top-[10.5em] sm:right-0 p-2 hidden gap-2 items-center border-roundedGrey border-2 w-[40%] lg:w-[12%] justify-center rounded-full m-auto lg:m-0 -translate-y-12`}
+            className={`${prop.socialClass}  sm:absolute sm:top-[10.5em] tablet:top-[15.8em] sm:right-0 p-2 tablet:right-9 tablet:p-0 hidden gap-2 tablet:gap-1 items-center border-roundedGrey border-2 mobile:w-[40%] mobile:p-1 tablet:w-[15%]  lg:w-[12%] justify-center rounded-full m-auto lg:m-0 -translate-y-12`}
           >
             <span className=" border-2 w-[40px] h-[40px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
               <svg
@@ -118,9 +118,9 @@ const ResponsiveHeroImg = (prop) => {
           </div>
 
           <div
-            className={`${prop.serviceclass} sm:absolute sm:top-[8.25em] lg:top-14`}
+            className={`${prop.serviceclass} sm:absolute sm:top-[1em] lg:top-14 tablet:top-[9em]  `}
           >
-            <p className="text-[1rem] font-normal text-grey lg:font-extrabold">
+            <p className="text-[1rem] font-normal text-grey lg:font-extrabold tablet:font-bold">
               {prop.header}
             </p>
             <p className="text-[1.8rem] lg:text-5xl sm:text-xl font-semibold text-headerGrey lg:leading-[1.5em] ">
@@ -129,9 +129,9 @@ const ResponsiveHeroImg = (prop) => {
             <div className="flex justify-between flex-wrap m-auto  items-stretch  border-lightDark border-b-2 sm:border-0 py-6 sm:py-4 pb-10 sm:gap-2 lg:gap-4">
               <div>
                 <div
-                  className={`${prop.serviceparagraph} text-center lg:text-left  lg:w-[70%]`}
+                  className={`${prop.serviceparagraph} text-center lg:text-left mobile:w-full  lg:w-[70%] tablet:w-[60%]`}
                 >
-                  <p className="text-[0.8rem] sm:text-[0.4rem] lg:text-[1rem] font-normal text-textGrey text-left">
+                  <p className="text-[0.8rem] sm:text-[0.4rem] lg:text-[1rem] tablet:text-[.8rem] font-normal text-textGrey text-left">
                     {prop.paragraph}
                   </p>
                 </div>

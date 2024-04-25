@@ -137,7 +137,7 @@ function Testimonial() {
                         {" "}
                         {testimonial.name}
                       </p>
-                      <p className="text-sm font-thin">USA, California</p>
+                      <p className="text-sm font-thin ">USA, California</p>
                       <img
                         src={fivestarsImage}
                         alt="yellow 5 stars review"

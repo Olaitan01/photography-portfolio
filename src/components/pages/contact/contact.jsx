@@ -5,6 +5,7 @@ import Footer from "../../footer/footer";
 import image34 from "/src/assets/about/Image (34).png";
 import image35 from "/src/assets/about/Image (35).png";
 import arrowTopRight from "/src/assets/arrow-top-right.png";
+// import rightArrow from "/src/assets/right-arrow.svg";
 
 function Contact() {
   return (
@@ -29,10 +30,10 @@ function Contact() {
               available by phone, email, and social meida for your convenience.
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row sm:items-center sm:gap-8 pt-6 sm:pt-0">
-            <p className="text-headerGrey text-[0.9rem] underline pb-2 sm:pb-0">+1-123-456-7890</p>
-            <p className="text-headerGrey text-[0.9rem] underline">
-              info@damienbraunphotograhpy.com
+          <div className="flex flex-col sm:flex-row sm:items-center sm:gap-8 pt-6 sm:pt-0 tablet:flex-col">
+            <p className="text-headerGrey text-[0.9rem] underline pb-2 sm:pb-0 flex items-center gap-2">+1-123-456-7890 <img src={arrowTopRight} alt="right arrow icon" className="w-5" /></p>
+            <p className="text-headerGrey text-[0.9rem] underline flex items-center gap-2">
+              info@damienbraunphotograhpy.com <img src={arrowTopRight} alt="right arrow icon" className="w-5"/>
             </p>
           </div>
         </div>

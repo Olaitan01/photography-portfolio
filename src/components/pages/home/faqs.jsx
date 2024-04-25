@@ -73,7 +73,7 @@ function Faqs() {
       <div className="border-b-2 border-lightDark pb-2">
         <div>
           <p className="text-grey text-sm font-semilight ">FAQ&apos;S</p>
-          <p className="text-headerGrey text-2xl font-semibold w-80">
+          <p className="text-headerGrey text-2xl font-semibold w-80 ">
             FREQUENTLY ASKED QUESTIONS
           </p>
         </div>
@@ -81,23 +81,19 @@ function Faqs() {
 
       <div>
         {faqs.slice(0, isMobileFaq).map((faq, index) => (
-          <div key={index} className="flex justify-between items-center  ">
+          <div key={index} className=" ">
             <div
               onClick={() => toggleQuestion(index)}
-              className="flex  justify-between items-start border-b-2 gap-2 border-lightDark p-4 w-full  lg:border-lightDark cursor-pointer"
+              className=" border-b-2  border-lightDark p-4 w-full  lg:border-lightDark cursor-pointer"
             >
               <div>
-                <p className="text-lg text-primaryGrey w-80 lg:w-full">
+                <div className="flex justify-between gap-2 items-center">
+               <div>
+               <p className="text-lg text-primaryGrey  lg:w-full mobile:text-sm">
                   {faq.question}
                 </p>
-                {openIndexes.includes(index) && (
-                  <p className="answer overflow-hidden  transition-all duration-100 text-[1rem] text-grey font-normal ">
-                    {faq.answer}
-                  </p>
-                )}
-              </div>
-
-              <div>
+               </div>
+               <div>
                 <button className="w-10 h-10 rounded-full flex justify-center items-center border-2 border-lightDark">
                   <img
                     src={arrow}
@@ -108,6 +104,16 @@ function Faqs() {
                   />
                 </button>
               </div>
+                </div>
+                
+                {openIndexes.includes(index) && (
+                  <p className="answer overflow-hidden  transition-all duration-100 text-[1rem] text-grey font-normal ">
+                    {faq.answer}
+                  </p>
+                )}
+              </div>
+
+              
             </div>
             {/* <div
             className="flex  justify-between items-start border-b-2 gap-2 border-lightDark p-4 lg:w-full "
