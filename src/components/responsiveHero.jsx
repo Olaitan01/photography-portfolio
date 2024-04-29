@@ -17,7 +17,7 @@ const ResponsiveHeroImg = (prop) => {
   return (
     <>
       <div className=" w-[90%] flex justify-center m-auto  items-center">
-        <div className="lg:relative">
+        <div className="sm:relative">
           <div className="py-8">
             {!isMobile ? (
               <img
@@ -34,16 +34,16 @@ const ResponsiveHeroImg = (prop) => {
             )}
           </div>
 
-          <div className="hidden  sm:flex sm:justify-between sm:items-center sm:absolute lg:bottom-20 sm:bottom-[13rem] tablet:top-[10em] tablet:right-4 sm:w-[90%] lg:w-full ipadmini:hidden ">
+          <div className="hidden  sm:flex sm:justify-between sm:items-center sm:absolute lg:bottom-20  ipad:bottom-8 surfaceduo:bottom-10 laptop:bottom-20  sm:w-full   ">
             <div>
               <img
                 src={prop.herostar}
                 alt="A star in a circle"
-                className={`${prop.starProp} w-20 sm:w-10 lg:w-[80%] max-w-full object-cover`}
+                className={`${prop.starProp} w-20  lg:w-[80%] max-w-full object-cover ipad:w-[60%] surfaceduo:w-20`}
               />
             </div>
             <div>
-              <p className="text-[0.8rem] sm:text-[0.6rem] tablet:text-[1rem] lg:text-[0.8rem] text-textGrey lg:w-40 sm:w-20 tablet:w-40">
+              <p className="text-[0.8rem] sm:text-[1rem]  laptop:translate-x-0 sm:translate-x-7 lg:text-[0.8rem] text-textGrey lg:w-40 laptop:w-[60%] sm:w-20 tablet:w-40">
                 SCROLL DOWN TO SEE THE WORK
               </p>
             </div>
@@ -118,20 +118,20 @@ const ResponsiveHeroImg = (prop) => {
           </div>
 
           <div
-            className={`${prop.serviceclass} sm:absolute sm:top-[1em] lg:top-14 tablet:top-[9em]  `}
+            className={`${prop.serviceclass} sm:absolute  lg:top-14 ipad:top-2 surfaceduo:top-6  `}
           >
             <p className="text-[1rem] font-normal text-grey lg:font-extrabold tablet:font-bold">
               {prop.header}
             </p>
-            <p className="text-[1.8rem] lg:text-5xl sm:text-xl font-semibold text-headerGrey lg:leading-[1.5em] ">
+            <p className="text-[1.8rem] laptop:text-5xl surfaceduo:text-3xl lg:text-5xl sm:text-xl font-semibold text-headerGrey lg:leading-[1.5em] ">
               {prop.title}
             </p>
             <div className="flex justify-between flex-wrap m-auto  items-stretch  border-lightDark border-b-2 sm:border-0 py-6 sm:py-4 pb-10 sm:gap-2 lg:gap-4">
               <div>
                 <div
-                  className={`${prop.serviceparagraph} text-center lg:text-left mobile:w-full  lg:w-[70%] tablet:w-[60%]`}
+                  className={`${prop.serviceparagraph} text-center lg:text-left mobile:w-full   ipad:w-[60%] surfaceduo:w-[70%] laptop:w-[60%] `}
                 >
-                  <p className="text-[0.8rem] sm:text-[0.4rem] lg:text-[1rem] tablet:text-[.8rem] font-normal text-textGrey text-left">
+                  <p className="text-[0.8rem] sm:text-[0.4rem] lg:text-[1rem] tablet:text-[.8rem]  font-normal text-textGrey text-left">
                     {prop.paragraph}
                   </p>
                 </div>

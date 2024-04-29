@@ -24,11 +24,14 @@ export default {
          " min": '884px',
           "max": '1114px',
         }],
+        xs:[{
+          "min":"320px",
+        "max":"360"}],
         mobile:[{
           " min": '360px',
           "max": '439px',
         }],
-        ipadmini:'768px',
+        ipadmini:[{"max":'768px'}],
         ipad:[{
           "min": "640px",
           "max": "1014px"

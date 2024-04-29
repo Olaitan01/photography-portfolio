@@ -51,9 +51,9 @@ const Servicescomponent = (prop) => {
             alt="A portrait image of a blonde lady"
             className="w-full max-w-full object-cover"
           />
-          <div className=" p-1 flex gap-2 items-center border-roundedGrey border-2 w-[28%] sm:w-[16%] justify-center rounded-full m-auto -translate-y-4 sm:-translate-y-8">
+          <div className=" p-1 flex gap-2 items-center border-roundedGrey border-2 w-[28%] ipad:w-30 surfaceduo:w-[25%] laptop:max-w-[20%] justify-center rounded-full m-auto -translate-y-4 ipad:-translate-y-4 laptop:-translate-y-8">
             <button
-              className={`${prop.prevBtn} border-2 w-[50px] h-[50px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark`}
+              className={`${prop.prevBtn} border-2 ipad:w-[40px] w-[50px] ipad:h-[40px]  h-[50px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark`}
             >
               <svg
                 width="10"
@@ -72,7 +72,7 @@ const Servicescomponent = (prop) => {
               </svg>
             </button>
             <button
-              className={`${prop.nextBtn} border-2 w-[50px] h-[50px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark`}
+              className={`${prop.nextBtn} border-2 ipad:w-[40px] w-[50px] ipad:h-[40px] surfaceduo:w-[50px] surfaceduo:h-[50px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark`}
             >
               <svg
                 width="10"
@@ -119,7 +119,7 @@ const Servicescomponent = (prop) => {
                   </div>
                 </div>
 
-                <div className="sm:w-[200em]">
+                <div className="ipad:w-[60em] laptop:w-[200em]  surfaceduo:w-[150em]">
                   {service.details.map((detail, index) => (
                     <div key={index} className="sm:w-[100%]">
                       <div className=" inline-flex items-center gap-4 my-2 text-[1rem] sm:text-xl  text-headerGrey lg:text-sm font-thin border-2 border-lightDark rounded-md p-4 w-full">

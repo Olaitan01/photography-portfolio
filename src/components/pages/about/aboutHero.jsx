@@ -66,30 +66,30 @@ function AboutHero() {
             )}
           </div>
 
-          <div className="hidden  sm:flex sm:justify-between sm:items-center sm:absolute lg:bottom-20 sm:bottom-[13em] tablet:top-[25em] ipadmini:top-[22.5em] minilaptop:-bottom-[16em] laptop:left-[2.5em] tablet:right-4 ipadmini:w-[94%] ipadmini:left-[3.8em] sm:w-[90%] lg:w-full ">
+          <div className="hidden  sm:flex sm:justify-between sm:items-center sm:absolute   sm:w-full sm:bottom-12  ">
             <div>
               <img
                 src={heroStar}
                 alt="A star in a circle"
-                className="w-20 sm:w-10 lg:w-[80%] max-w-full object-cover"
+                className="w-20 sm:w-10 tablet:w-14 lg:w-[80%] max-w-full object-cover"
               />
             </div>
             <div>
-              <p className="text-[0.8rem] sm:text-[0.6rem] tablet:text-[1rem] lg:text-[0.8rem] text-textGrey lg:w-40 sm:w-20 tablet:w-40  ">
+              <p className="text-[0.8rem]  tablet:text-[0.8rem] tablet:translate-x-[6.5em] surfaceduo:translate-x-[5em] laptop:translate-x-[4em] lg:text-[0.8rem] text-textGrey surfaceduo:w-[60%] tablet:w-[60%]  ">
                 SCROLL DOWN TO SEE THE WORK
               </p>
             </div>
           </div>
 
-          <div className=" sm:absolute  ipad:top-[.95em] minilaptop:top-[3em] laptop:top-[5em] w-full ">
+          <div className=" sm:absolute  ipad:translate-y-[0.25em]  ipad:top-[1.2em] minilaptop:top-12   laptop:top-[5em] w-full ">
             <p className="text-[1rem] font-normal text-grey lg:pl-2">ABOUT</p>
             <p className="text-[1.8rem] sm:text-1xl md:text-2xl font-semibold text-headerGrey ">
               ABOUT DAMIEN BRAUN
             </p>
-            <div className="border-2 border-solid sm:border-[green] flex justify-between   sm:w-full  flex-wrap sm:flex-nowrap m-auto  items-stretch  border-lightDark border-b-2  py-6 sm:py-4 pb-10 sm:gap-2    ">
+            <div className=" flex justify-between   sm:w-full  flex-wrap sm:flex-nowrap m-auto  items-stretch sm:border-0 border-lightDark border-b-2  py-6 sm:py-4 pb-10 sm:gap-2    ">
               {workStats.map((workStat, index) => (
-                <div key={index} className="m-auto">
-                  <div className="ipad:w-[14vw] border-solid border-2 border-lightDark bg-serviceBg text-center lg:text-left p-4 my-2 w-40 sm:w-[100%] minilaptop:w-full laptop:text-center minilaptop:p-4 laptop:6 ipad:p-4 sm:p-2 lg:p-4 rounded-lg">
+                <div key={index} className="m-auto sm:m-0">
+                  <div className="ipad:w-[14vw]  border-solid border-2 border-lightDark bg-serviceBg text-center lg:text-left p-4 my-2 w-40 sm:w-[100%] minilaptop:w-full laptop:text-center minilaptop:p-4  laptop:6 ipad:p-4 sm:p-2 lg:p-4 rounded-lg">
                     <p className="text-[1.5rem] sm:text-[1rem]  text-headerGrey font-semibold">
                       {workStat.statNo}
                     </p>
