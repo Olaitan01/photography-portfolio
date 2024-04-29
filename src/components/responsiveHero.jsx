@@ -43,16 +43,16 @@ const ResponsiveHeroImg = (prop) => {
               />
             </div>
             <div>
-              <p className="text-[0.8rem] sm:text-[1rem]  laptop:translate-x-0 sm:translate-x-7 lg:text-[0.8rem] text-textGrey lg:w-40 laptop:w-[60%] sm:w-20 tablet:w-40">
+              <p className={`${prop.navtext} text-[0.8rem] sm:text-[1rem]  laptop:translate-x-0 sm:translate-x-7 lg:text-[0.8rem] text-textGrey lg:w-40 laptop:w-[60%] sm:w-20 tablet:w-40`}>
                 SCROLL DOWN TO SEE THE WORK
               </p>
             </div>
           </div>
 
           <div
-            className={`${prop.socialClass}  sm:absolute sm:top-[10.5em] tablet:top-[15.8em] sm:right-0 p-2 tablet:right-9 tablet:p-0 hidden gap-2 tablet:gap-1 items-center border-roundedGrey border-2 mobile:w-[40%] mobile:p-1 tablet:w-[15%]  lg:w-[12%] justify-center rounded-full m-auto lg:m-0 -translate-y-12`}
+            className={`${prop.socialClass}  sm:absolute ipad:w-[16%] ipad:p-2 ipad:top-[7.5em]  ipad:-right-0  surfaceduo:top-[9em] surfaceduo:p-4 surfaceduo:w-40 surfaceduo:right-0 laptop:p-3 laptop:top-[10.5em] laptop:right-2 tablet:gap-1 items-center hidden gap-2 border-roundedGrey border-2 mobile:w-[40%] mobile:p-1   lg:w-[12%] justify-center rounded-full m-auto lg:m-0 -translate-y-12`}
           >
-            <span className=" border-2 w-[40px] h-[40px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
+            <span className=" border-2 ipad:w-[30px] w-[40px] h-[40px] ipad:h-[30px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
               <svg
                 width="16"
                 height="16"
@@ -73,7 +73,7 @@ const ResponsiveHeroImg = (prop) => {
                 </defs>
               </svg>
             </span>
-            <span className=" border-2 w-[40px] h-[40px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
+            <span className=" border-2 ipad:w-[30px] w-[40px] h-[40px] ipad:h-[30px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
               <svg
                 width="16"
                 height="16"
@@ -94,7 +94,7 @@ const ResponsiveHeroImg = (prop) => {
                 </defs>
               </svg>
             </span>
-            <span className=" border-2 w-[40px] h-[40px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
+            <span className=" border-2 ipad:w-[30px] w-[40px] h-[40px] ipad:h-[30px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
               <svg
                 width="16"
                 height="16"
@@ -120,10 +120,10 @@ const ResponsiveHeroImg = (prop) => {
           <div
             className={`${prop.serviceclass} sm:absolute  lg:top-14 ipad:top-2 surfaceduo:top-6  `}
           >
-            <p className="text-[1rem] font-normal text-grey lg:font-extrabold tablet:font-bold">
+            <p className={`${prop.serviceheader} text-[1rem] font-normal text-grey lg:font-extrabold tablet:font-bold`}>
               {prop.header}
             </p>
-            <p className="text-[1.8rem] laptop:text-5xl surfaceduo:text-3xl lg:text-5xl sm:text-xl font-semibold text-headerGrey lg:leading-[1.5em] ">
+            <p className={`${prop.servicetitle} text-[1.8rem] laptop:text-5xl surfaceduo:text-3xl lg:text-5xl sm:text-xl font-semibold text-headerGrey lg:leading-[1.5em] `}>
               {prop.title}
             </p>
             <div className="flex justify-between flex-wrap m-auto  items-stretch  border-lightDark border-b-2 sm:border-0 py-6 sm:py-4 pb-10 sm:gap-2 lg:gap-4">

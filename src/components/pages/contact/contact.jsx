@@ -16,9 +16,13 @@ function Contact() {
         starProp="star"
         header="CONTACT ME"
         title="GET IN TOUCH WITH ME"
+        serviceheader="header"
+        servicetitle="title"
         paragraph="Step into a world of timeless photography with Damien Braun. Explore our range of photography services, each crafted to tell your unique story through captivating images. Whether it's the magic of portraits, the emotion of events, or the allure of commercial photography, we're here to bring your vision to life."
         serviceclass="contactText"
         socialClass="socials"
+        navtext="navtext"
+
       />
 
       <div className="text-textGrey w-[90%] m-auto">
