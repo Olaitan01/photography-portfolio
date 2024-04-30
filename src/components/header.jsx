@@ -2,6 +2,13 @@ import { NavLink } from "react-router-dom";
 import logo from "/src/assets/Logo.png";
 import openIcon from "/src/assets/openMenu.png";
 function Header() {
+  const activeLink = ({ isActive }) => {
+    return {
+      color: isActive ? "rgb(228,228,230)" : "",
+      backgroundColor: isActive ? "rgb(28,28,33)" : "",
+    };
+  };
+
   return (
     <div>
       <div className="headerTop text-headerGrey   border-0 border-b-2 border-lightDark outline-none ">
@@ -15,6 +22,7 @@ function Header() {
                 <NavLink
                   to="/"
                   className="border-r-2 border-lightDark p-8  cursor-pointer hover:bg-lightDark hover:text-headerGrey "
+                  style={activeLink}
                 >
                   Home
                 </NavLink>
@@ -23,6 +31,7 @@ function Header() {
                 <NavLink
                   to="/about"
                   className="border-r-2 border-lightDark px-6 py-8 cursor-pointer  hover:bg-lightDark hover:text-headerGrey "
+                  style={activeLink}
                 >
                   About Me
                 </NavLink>
@@ -31,6 +40,7 @@ function Header() {
                 <NavLink
                   to="/portfolio"
                   className="border-r-2 border-lightDark px-6 py-8 cursor-pointer  hover:bg-lightDark hover:text-headerGrey "
+                  style={activeLink}
                 >
                   Portfolio
                 </NavLink>
@@ -38,14 +48,21 @@ function Header() {
               <NavLink
                 to="/services"
                 className="px-6 py-8 cursor-pointer  hover:bg-lightDark hover:text-headerGrey "
+                style={activeLink}
               >
                 Services
               </NavLink>
             </ul>
           </div>
           <div className="border-l-2 border-t-2  border-lightDark p-4 rounded-tl-[1rem] lg:border-0">
-            <button >
-            <NavLink to= "/contact" className="hidden lg:block lg:border-2-solid lg:bg-lightDark p-4 rounded-lg">Contact Me</NavLink>
+            <button>
+              <NavLink
+                to="/contact"
+                className="hidden lg:block lg:border-2-solid lg:bg-lightDark p-4 rounded-lg"
+                style={activeLink}
+              >
+                Contact Me
+              </NavLink>
             </button>
             <button className=" lg:hidden">
               <img src={openIcon} alt="open and close icons" />
