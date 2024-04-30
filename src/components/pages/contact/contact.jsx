@@ -22,29 +22,36 @@ function Contact() {
         serviceclass="contactText"
         socialClass="socials"
         navtext="navtext"
-
       />
 
       <div className="text-textGrey w-[90%] m-auto">
         <div className="flex flex-col sm:flex-row sm:items-center sm:gap-8 sm:border-t-2  border-lightDark sm:py-8 py-4">
           <div className=" sm:w-[30em]">
-            <p className="sm:text-4xl text-2xl font-semibold sm:py-4 py-2">CONTACT INFORMATION</p>
+            <p className="sm:text-4xl text-2xl font-semibold sm:py-4 py-2">
+              CONTACT INFORMATION
+            </p>
             <p className="text-[.9rem] font-light sm:w-[90%] ">
               Feel free to reach out to us through various channels. We are
               available by phone, email, and social meida for your convenience.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row sm:items-center sm:gap-8 pt-6 sm:pt-0 tablet:flex-col">
-            <p className="text-headerGrey text-[0.9rem] underline pb-2 sm:pb-0 flex items-center gap-2">+1-123-456-7890 <img src={arrowTopRight} alt="right arrow icon" className="w-5" /></p>
+            <p className="text-headerGrey text-[0.9rem] underline pb-2 sm:pb-0 flex items-center gap-2">
+              +1-123-456-7890{" "}
+              <img src={arrowTopRight} alt="right arrow icon" className="w-5" />
+            </p>
             <p className="text-headerGrey text-[0.9rem] underline flex items-center gap-2">
-              info@damienbraunphotograhpy.com <img src={arrowTopRight} alt="right arrow icon" className="w-5"/>
+              info@damienbraunphotograhpy.com{" "}
+              <img src={arrowTopRight} alt="right arrow icon" className="w-5" />
             </p>
           </div>
         </div>
 
         <div className="flex flex-col sm:flex-row sm:items-start sm:gap-28  border-t-2 border-lightDark sm:py-6 py-4">
           <div className=" sm:w-[40em]">
-            <p className="sm:text-4xl text-2xl font-semibold sm:py-4 py-2">SEND ME A MESSAGE</p>
+            <p className="sm:text-4xl text-2xl font-semibold sm:py-4 py-2">
+              SEND ME A MESSAGE
+            </p>
             <p className="text-[.9rem] font-light sm:w-[90%] ">
               Have a specific inquiry or message for us? Please use the contact
               form below, and we&apos;ll get back to you promptly
@@ -140,8 +147,8 @@ function Contact() {
         </div>
       </div>
 
-      <Testimonial/>
-      <Footer/>
+      <Testimonial />
+      <Footer />
     </>
   );
 }

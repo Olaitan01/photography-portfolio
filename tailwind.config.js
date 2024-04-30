@@ -20,25 +20,34 @@ export default {
         custom: ["Manrope", "sans-serif"],
       },
       screens: {
-        tablet: [{
-         " min": '884px',
-          "max": '1114px',
-        }],
-        xs:[{
-          "min":"320px",
-        "max":"360"}],
-        mobile:[{
-          " min": '360px',
-          "max": '439px',
-        }],
-        ipadmini:[{"max":'768px'}],
-        ipad:[{
-          "min": "640px",
-          "max": "1014px"
-        }],
-        minilaptop:'1014px',
-        surfaceduo:'1114px',
-        laptop:'1440px'
+        tablet: [
+          {
+            " min": "884px",
+            max: "1114px",
+          },
+        ],
+        xs: [
+          {
+            min: "320px",
+            max: "360",
+          },
+        ],
+        mobile: [
+          {
+            " min": "360px",
+            max: "439px",
+          },
+        ],
+        ipadmini: [{ max: "768px" }],
+        ipad: [
+          {
+            min: "640px",
+            max: "1014px",
+          },
+        ],
+        minilaptop: "1014px",
+        surfaceduo: "1114px",
+        laptop: "1440px",
       },
     },
   },
