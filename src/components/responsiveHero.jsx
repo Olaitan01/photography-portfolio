@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 
 const ResponsiveHeroImg = (prop) => {
-  const [isMobile, setIsMobile] = useState(false);
+   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     function isResponsive() {

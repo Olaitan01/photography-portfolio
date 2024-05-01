@@ -16,6 +16,12 @@ export default {
       textGrey: "rgb(114,116,126)",
     },
     extend: {
+      backgroundColor:{
+        initial:"initial"
+      },
+      width: {
+        initial: "initial",
+      },
       fontFamily: {
         custom: ["Manrope", "sans-serif"],
       },
