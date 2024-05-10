@@ -18,8 +18,6 @@ function Header() {
     };
   };
 
-  
-  
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -39,6 +37,21 @@ function Header() {
 
   const openMenu = () => setIsOpen(!isOpen);
 
+  const handleNavLinkClick = () => setIsOpen(!isOpen);
+
+const dropDownMenuStyles = {
+  clipPath: isOpen ? "circle( 75%)" : "circle(0% at 90% 10%)",
+  background: isOpen ? "rgb(176,171,207)" : "rgb(176,171,207)",
+  transition: "clip-path 1s ease-in-out, background 0.5s ease-in-out",
+  position:"absolute",
+  width: "100%",
+  height: "100vh",
+  bottom: 0,
+  left:0,
+  zIndex:10,
+  overflow:"hidden"
+}
+
   return (
     <div className="">
       <div className="headerTop text-headerGrey   border-0 border-b-2 border-lightDark outline-none ">
@@ -46,13 +59,18 @@ function Header() {
           <div className="pb-2 cursor-pointer">
             <img src={logo} alt="Damien logo" className="w-[100%] object-fit" />
           </div>
-          <div className="absolute flex lg:flex-initial items-center z-10 bg-[red] lg:bg-initial lg:static top-0 left-0 w-full lg:w-initial  h-full  m-auto  lg:block lg:border-t-2 lg:border-x-2  lg:border-lightDark lg:rounded-t-md">
-            <ul className="flex flex-col pl-8 gap-y-8 lg:pl-0 lg:gap-0  text-4xl lg:flex-row lg:items-center   lg:text-sm lg:text-grey lg:font-semibold">
+
+          <div
+           
+            className={ !isMobile ? `navs lg:w-initial    m-auto  lg:block  lg:border-t-2 lg:border-x-2  lg:border-lightDark lg:rounded-t-md` : dropDownMenuStyles}
+          >
+            <ul className="flex lg:pl-0 lg:gap-0  lg:flex-row lg:items-center   lg:text-sm lg:text-grey lg:font-semibold">
               <li>
                 <NavLink
                   to="/"
                   className="lg:border-r-2 border-lightDark lg:p-8  lcursor-pointer lg:hover:bg-lightDark hover:text-headerGrey "
                   style={activeStyle}
+                  onClick={handleNavLinkClick}
                 >
                   Home
                 </NavLink>
@@ -62,6 +80,7 @@ function Header() {
                   to="/about"
                   className="lg:border-r-2 border-lightDark lg:px-6 lg:py-8 cursor-pointer  lg:hover:bg-lightDark hover:text-headerGrey "
                   style={activeStyle}
+                  onClick={handleNavLinkClick}
                 >
                   About Me
                 </NavLink>
@@ -71,6 +90,7 @@ function Header() {
                   to="/portfolio"
                   className="lg:border-r-2 border-lightDark lg:px-6 lg:py-8 cursor-pointer  lg:hover:bg-lightDark hover:text-headerGrey "
                   style={activeStyle}
+                  onClick={handleNavLinkClick}
                 >
                   Portfolio
                 </NavLink>
@@ -80,6 +100,7 @@ function Header() {
                 to="/services"
                 className="lg:px-6 lg:py-8 cursor-pointer  lg:hover:bg-lightDark hover:text-headerGrey "
                 style={activeStyle}
+                onClick={handleNavLinkClick}
               >
                 Services
               </NavLink>
@@ -89,6 +110,7 @@ function Header() {
                   to="/contact"
                   className="lg:hidden "
                   style={activeStyle}
+                  onClick={handleNavLinkClick}
                 >
                   Contact Me
                 </NavLink>
@@ -105,8 +127,12 @@ function Header() {
                 Contact Me
               </NavLink>
             </button>
-            <button className=" lg:hidden " onClick={() => openMenu()}>
-              <img src={openIcon} alt="open and close icons" />
+            <button className=" lg:hidden  " onClick={openMenu}>
+              {isOpen ? (
+                <img src={openIcon} alt="open and close icons" />
+              ) : (
+                <img src={openIcon} alt="open and close icons" />
+              )}
             </button>
           </div>
         </div>

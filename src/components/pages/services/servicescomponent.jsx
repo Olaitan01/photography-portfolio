@@ -53,7 +53,7 @@ const Servicescomponent = (prop) => {
           />
           <div className=" p-1 flex gap-2 items-center border-roundedGrey border-2 w-[28%] ipad:w-30 surfaceduo:w-[25%] laptop:max-w-[20%] justify-center rounded-full m-auto -translate-y-4 ipad:-translate-y-4 laptop:-translate-y-8">
             <button
-              className={`${prop.prevBtn} border-2 ipad:w-[40px] w-[50px] ipad:h-[40px]  h-[50px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark`}
+              className={`${prop.prevBtn} border-2 ipad:w-[40px] w-[40px] ipad:h-[40px]  h-[40px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark`}
             >
               <svg
                 width="10"
@@ -72,7 +72,7 @@ const Servicescomponent = (prop) => {
               </svg>
             </button>
             <button
-              className={`${prop.nextBtn} border-2 ipad:w-[40px] w-[50px] ipad:h-[40px] surfaceduo:w-[50px] surfaceduo:h-[50px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark`}
+              className={`${prop.nextBtn} border-2 ipad:w-[40px] w-[40px] ipad:h-[40px]  h-[40px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark`}
             >
               <svg
                 width="10"
