@@ -18,11 +18,14 @@ function Header() {
     };
   };
 
+  // Mobile detection state
   const [isMobile, setIsMobile] = useState(false);
 
+  // Add resize event listener on component mount and remove on unmount
   useEffect(() => {
+    // Function to determine screen size on render and resize
     function isResponsive() {
-      setIsMobile(window.innerWidth < 1114);
+      setIsMobile(window.innerWidth < 1014);
     }
 
     window.addEventListener("resize", isResponsive);
@@ -30,6 +33,7 @@ function Header() {
     return () => window.removeEventListener("resize", isResponsive);
   }, []);
 
+  // Combine active link styles based on mobile state
   const activeStyle = !isMobile ? activeLink : mobileActiveLink;
 
   //Mobile drop down
@@ -39,18 +43,30 @@ function Header() {
 
   const handleNavLinkClick = () => setIsOpen(!isOpen);
 
-const dropDownMenuStyles = {
-  clipPath: isOpen ? "circle( 75%)" : "circle(0% at 90% 10%)",
-  background: isOpen ? "rgb(176,171,207)" : "rgb(176,171,207)",
-  transition: "clip-path 1s ease-in-out, background 0.5s ease-in-out",
-  position:"absolute",
-  width: "100%",
-  height: "100vh",
-  bottom: 0,
-  left:0,
-  zIndex:10,
-  overflow:"hidden"
-}
+  //styles for mobile navigation
+  const dropDownMenuStyles = {
+    clipPath: isOpen ? "circle( 75%)" : "circle(0% at 90% 10%)",
+    background: "rgb(228,228,230)",
+    transition: "clip-path 1s ease-in-out",
+    position: "absolute",
+    width: "100%",
+    height: "100vh",
+    bottom: 0,
+    left: 0,
+    zIndex: 10,
+    overflow: "hidden",
+    
+  };
+
+  //styles for desktop navigation
+  const desktopNavStyles = {
+    width: "initial",
+    margin: "auto",
+    borderTop: "2px solid rgb(28,28,33)",
+    borderLeft: "2px solid rgb(28,28,33)",
+    borderRight: "2px solid rgb(28,28,33)",
+    borderRadius: "1em 1em 0 0",
+  };
 
   return (
     <div className="">
@@ -60,11 +76,8 @@ const dropDownMenuStyles = {
             <img src={logo} alt="Damien logo" className="w-[100%] object-fit" />
           </div>
 
-          <div
-           
-            className={ !isMobile ? `navs lg:w-initial    m-auto  lg:block  lg:border-t-2 lg:border-x-2  lg:border-lightDark lg:rounded-t-md` : dropDownMenuStyles}
-          >
-            <ul className="flex lg:pl-0 lg:gap-0  lg:flex-row lg:items-center   lg:text-sm lg:text-grey lg:font-semibold">
+          <div style={!isMobile ? desktopNavStyles : dropDownMenuStyles} >
+            <ul className="flex-col text-4xl pt-[5em] pl-[1em] gap-[1em] text-[#000000] text- flex lg:pt-0 lg:pl-0 lg:gap-0  lg:flex-row lg:items-center   lg:text-sm lg:text-grey lg:font-semibold ">
               <li>
                 <NavLink
                   to="/"
@@ -117,7 +130,7 @@ const dropDownMenuStyles = {
               </li>
             </ul>
           </div>
-          <div className="z-10 lg:z-0 border-l-2 border-t-2  border-lightDark p-4 rounded-tl-[1rem] lg:border-0">
+          <div className={isOpen ?`border-0 z-10` : ` lg:z-0 border-l-2 border-t-2  border-lightDark p-4 rounded-tl-[1rem] lg:border-0` }>
             <button>
               <NavLink
                 to="/contact"
@@ -129,7 +142,18 @@ const dropDownMenuStyles = {
             </button>
             <button className=" lg:hidden  " onClick={openMenu}>
               {isOpen ? (
-                <img src={openIcon} alt="open and close icons" />
+                <svg
+                  width="40px"
+                  height="40px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.293 5.293a1 1 0 0 1 1.414 0L12 10.586l5.293-5.293a1 1 0 1 1 1.414 1.414L13.414 12l5.293 5.293a1 1 0 0 1-1.414 1.414L12 13.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L10.586 12 5.293 6.707a1 1 0 0 1 0-1.414z"
+                    fill="#000000"
+                  />
+                </svg>
               ) : (
                 <img src={openIcon} alt="open and close icons" />
               )}

@@ -6,7 +6,7 @@ const ResponsiveHeroImg = (prop) => {
 
   useEffect(() => {
     function isResponsive() {
-      setIsMobile(window.innerWidth < 439);
+      setIsMobile(window.innerWidth < 640);
     }
 
     window.addEventListener("resize", isResponsive);
