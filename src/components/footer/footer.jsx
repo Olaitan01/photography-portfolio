@@ -167,7 +167,7 @@ function Footer() {
                 </span>
               </div>
                     <p className="py-4">&copy; {new Date().getFullYear()} Damien Braun Photography. All rights reserved.</p>
-                    <div className="lg:hidden p-2  flex gap-2 items-center border-roundedGrey border-2 max-w-[20%] mobile:max-w-[50%] lg:w-[12%] justify-center rounded-full m-auto lg:m-0">
+                    <div className="lg:hidden p-2  flex gap-2 items-center border-roundedGrey border-2 max-w-[40%] mobile:max-w-[50%] lg:w-[12%] justify-center rounded-full m-auto lg:m-0">
                 <span className=" border-2 w-[40px] h-[40px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
                   <svg
                     width="16"
