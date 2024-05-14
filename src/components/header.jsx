@@ -54,12 +54,10 @@ function Header() {
     bottom: 0,
     left: 0,
     zIndex: 10,
-    
   };
 
   //styles for desktop navigation
   const desktopNavStyles = {
-
     margin: "auto",
     borderTop: "2px solid rgb(28,28,33)",
     borderLeft: "2px solid rgb(28,28,33)",
@@ -75,8 +73,8 @@ function Header() {
             <img src={logo} alt="Damien logo" className="w-[100%] object-fit" />
           </div>
 
-          <div style={!isMobile ? desktopNavStyles : dropDownMenuStyles} >
-            <ul className="flex-col text-4xl pt-[5em] pl-[1em] gap-[1em] text-[#000000] text- flex lg:pt-0 lg:pl-0 lg:gap-0  minilaptop:flex-row lg:items-center   lg:text-sm lg:text-grey lg:font-semibold ">
+          <div style={!isMobile ? desktopNavStyles : dropDownMenuStyles}>
+            <ul className="flex-col text-4xl pt-[5em] pl-[1em] gap-[1em] text-[#000000] text- flex lg:pt-0 lg:pl-0 lg:gap-0  lg:flex-row lg:items-center   lg:text-sm lg:text-grey lg:font-semibold ">
               <li>
                 <NavLink
                   to="/"
@@ -129,7 +127,13 @@ function Header() {
               </li>
             </ul>
           </div>
-          <div className={isOpen ?`border-0 z-10` : ` lg:z-0 border-l-2 border-t-2  border-lightDark p-4 rounded-tl-[1rem] lg:border-0` }>
+          <div
+            className={
+              isOpen
+                ? `border-0 z-10`
+                : ` lg:z-0 border-l-2 border-t-2  border-lightDark p-4 rounded-tl-[1rem] lg:border-0`
+            }
+          >
             <button>
               <NavLink
                 to="/contact"
