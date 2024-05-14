@@ -74,7 +74,7 @@ function Header() {
           </div>
 
           <div style={!isMobile ? desktopNavStyles : dropDownMenuStyles}>
-            <ul className="flex-col text-4xl pt-[5em] pl-[1em] gap-[1em] text-[#000000] text- flex lg:pt-0 lg:pl-0 lg:gap-0  lg:flex-row lg:items-center   lg:text-sm lg:text-grey lg:font-semibold ">
+            <ul className="flex-col text-4xl pt-[5em] pl-[1em] gap-[1em] text-[#000000] text- flex lg:pt-0 lg:pl-0 lg:gap-0  lg:flex-row lg:items-center   lg:text-sm lg:text-[#ffffff] lg:font-semibold ">
               <li>
                 <NavLink
                   to="/"
