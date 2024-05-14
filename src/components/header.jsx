@@ -9,6 +9,7 @@ function Header() {
     return {
       color: isActive ? "rgb(228,228,230)" : "",
       backgroundColor: isActive ? "rgb(28,28,33)" : "",
+    
     };
   };
 
@@ -58,11 +59,14 @@ function Header() {
 
   //styles for desktop navigation
   const desktopNavStyles = {
+    clipPath:"initial",
     margin: "auto",
+    height:"initial",
     borderTop: "2px solid rgb(28,28,33)",
     borderLeft: "2px solid rgb(28,28,33)",
     borderRight: "2px solid rgb(28,28,33)",
     borderRadius: "1em 1em 0 0",
+    overflow: "hidden",
   };
 
   return (
@@ -74,11 +78,11 @@ function Header() {
           </div>
 
           <div style={!isMobile ? desktopNavStyles : dropDownMenuStyles}>
-            <ul className="flex-col text-4xl pt-[5em] pl-[1em] gap-[1em] text-[#000000] text- flex lg:pt-0 lg:pl-0 lg:gap-0  lg:flex-row lg:items-center   lg:text-sm lg:text-[rgb(228,228,230)] lg:font-semibold ">
-              <li>
+            <ul className="flex-col text-4xl pt-[5em] pl-[1em] gap-[1em] text-[#000000]  flex lg:pt-0 lg:pl-0 lg:gap-0  lg:flex-row lg:items-center   lg:text-sm lg:text-[rgb(228,228,230)] lg:font-semibold ">
+              <li >
                 <NavLink
                   to="/"
-                  className="lg:border-r-2 border-lightDark lg:p-8  lcursor-pointer lg:hover:bg-lightDark hover:text-headerGrey "
+                  className="lg:border-r-2 border-lightDark lg:p-8  cursor-pointer lg:hover:bg-lightDark hover:text-headerGrey "
                   style={activeStyle}
                   onClick={handleNavLinkClick}
                 >
