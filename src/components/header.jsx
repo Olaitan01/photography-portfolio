@@ -25,7 +25,7 @@ function Header() {
   useEffect(() => {
     // Function to determine screen size on render and resize
     function isResponsive() {
-      setIsMobile(window.innerWidth < 1014);
+      setIsMobile(window.innerWidth < 1024);
     }
 
     window.addEventListener("resize", isResponsive);
@@ -54,13 +54,12 @@ function Header() {
     bottom: 0,
     left: 0,
     zIndex: 10,
-    overflow: "hidden",
     
   };
 
   //styles for desktop navigation
   const desktopNavStyles = {
-    width: "initial",
+
     margin: "auto",
     borderTop: "2px solid rgb(28,28,33)",
     borderLeft: "2px solid rgb(28,28,33)",
@@ -77,7 +76,7 @@ function Header() {
           </div>
 
           <div style={!isMobile ? desktopNavStyles : dropDownMenuStyles} >
-            <ul className="flex-col text-4xl pt-[5em] pl-[1em] gap-[1em] text-[#000000] text- flex lg:pt-0 lg:pl-0 lg:gap-0  lg:flex-row lg:items-center   lg:text-sm lg:text-grey lg:font-semibold ">
+            <ul className="flex-col text-4xl pt-[5em] pl-[1em] gap-[1em] text-[#000000] text- flex lg:pt-0 lg:pl-0 lg:gap-0  minilaptop:flex-row lg:items-center   lg:text-sm lg:text-grey lg:font-semibold ">
               <li>
                 <NavLink
                   to="/"
