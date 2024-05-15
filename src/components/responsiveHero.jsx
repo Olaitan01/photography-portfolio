@@ -2,36 +2,36 @@ import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 
 const ResponsiveHeroImg = (prop) => {
-   const [isMobile, setIsMobile] = useState(false);
+  //  const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    function isResponsive() {
-      setIsMobile(window.innerWidth < 640);
-    }
+  // useEffect(() => {
+  //   function isResponsive() {
+  //     setIsMobile(window.innerWidth < 640);
+  //   }
 
-    window.addEventListener("resize", isResponsive);
+  //   window.addEventListener("resize", isResponsive);
 
-    return () => window.removeEventListener("resize", isResponsive);
-  }, []);
+  //   return () => window.removeEventListener("resize", isResponsive);
+  // }, []);
 
   return (
     <>
-      <div className=" w-[90%] flex justify-center m-auto  items-center">
+      <div className=" w-[90%] flex justify-center m-auto  items-center ">
         <div className="sm:relative">
           <div className="py-8">
-            {!isMobile ? (
+            
               <img
                 src={prop.desktopImg}
                 alt="Damien standing upright with his arms folded"
-                className="w-full object-cover max-w-full"
+                className="w-full object-cover max-w-full sm:block hidden"
               />
-            ) : (
+            
               <img
                 src={prop.mobileImg}
                 alt="Damien standing upright with his arms folded"
-                className="w-full object-cover max-w-full"
+                className="w-full object-cover max-w-full sm:hidden block"
               />
-            )}
+            
           </div>
 
           <div className="hidden  sm:flex sm:justify-between sm:items-center sm:absolute lg:bottom-20  ipad:bottom-8 surfaceduo:bottom-10 laptop:bottom-20  sm:w-full   ">
