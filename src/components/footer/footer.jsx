@@ -67,30 +67,30 @@ function Footer() {
                <div>
                 <p className="footerSerivce">CLIENTS</p>
                 <ul className="footerListContainer">
-                    <li className="footerList">KLOVESSTO</li>
-                    <li className="footerList">NUKEWAY</li>
-                    <li className="footerList">CLOVEN&apos;S</li>
-                    <li className="footerList">MENVOL</li>
+                    <li className="footerList cursor-pointer">KLOVESSTO</li>
+                    <li className="footerList cursor-pointer">NUKEWAY</li>
+                    <li className="footerList cursor-pointer">CLOVEN&apos;S</li>
+                    <li className="footerList  cursor-pointer">MENVOL</li>
                 </ul>
                </div>
 
                <div>
                 <p className="footerSerivce">PORTFOLIO</p>
                 <ul className="footerListContainer">
-                    <li className="footerList">EVENTS</li>
-                    <li className="footerList">PORTRAIT</li>
-                    <li className="footerList">BRANDING</li>
-                    <li className="footerList">COMMERCIALE</li>
-                    <li className="footerList">WEDDING</li>
+                    <li className="footerList cursor-pointer">EVENTS</li>
+                    <li className="footerList cursor-pointer">PORTRAIT</li>
+                    <li className="footerList cursor-pointer">BRANDING</li>
+                    <li className="footerList cursor-pointer">COMMERCIALE</li>
+                    <li className="footerList cursor-pointer">WEDDING</li>
                 </ul>
                </div>
 
                 <div>
                     <p className="footerSerivce">SERVICES</p>
                     <ul className="footerListContainer">
-                    <li className="footerList">PORTRAITS</li>
-                    <li className="footerList">EVENTS</li>
-                    <li className="footerList">COMMERCIAL</li>
+                    <li className="footerList cursor-pointer">PORTRAITS</li>
+                    <li className="footerList cursor-pointer">EVENTS</li>
+                    <li className="footerList cursor-pointer">COMMERCIAL</li>
                 </ul>
                 </div>
               </div>
@@ -102,7 +102,7 @@ function Footer() {
         <div className="text-sm py-8 font-normal text-grey text-center border-t-2 border-lightDark lg:flex lg:justify-between lg:items-center lg:">
                     <p className="">Terms & Condition | Privacy Policy</p>
                     <div className="p-2 hidden  lg:flex gap-2 items-center border-roundedGrey border-2 max-w-[20%] mobile:max-w-[50%] lg:w-[12%] justify-center rounded-full m-auto lg:m-0">
-                <span className=" border-2 w-[40px] h-[40px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
+                <span className="cursor-pointer border-2 w-[40px] h-[40px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
                   <svg
                     width="16"
                     height="16"
@@ -123,7 +123,7 @@ function Footer() {
                     </defs>
                   </svg>
                 </span>
-                <span className=" border-2 w-[40px] h-[40px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
+                <span className="cursor-pointer border-2 w-[40px] h-[40px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
                   <svg
                     width="16"
                     height="16"
@@ -144,7 +144,7 @@ function Footer() {
                     </defs>
                   </svg>
                 </span>
-                <span className=" border-2 w-[40px] h-[40px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
+                <span className="cursor-pointer border-2 w-[40px] h-[40px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
                   <svg
                     width="16"
                     height="16"
@@ -168,7 +168,7 @@ function Footer() {
               </div>
                     <p className="py-4">&copy; {new Date().getFullYear()} Damien Braun Photography. All rights reserved.</p>
                     <div className="lg:hidden p-2  flex gap-2 items-center border-roundedGrey border-2 max-w-[40%] mobile:max-w-[50%] lg:w-[12%] justify-center rounded-full m-auto lg:m-0">
-                <span className=" border-2 w-[40px] h-[40px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
+                <span className="cursor-pointer border-2 w-[40px] h-[40px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
                   <svg
                     width="16"
                     height="16"
@@ -189,7 +189,7 @@ function Footer() {
                     </defs>
                   </svg>
                 </span>
-                <span className=" border-2 w-[40px] h-[40px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
+                <span className="cursor-pointer border-2 w-[40px] h-[40px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
                   <svg
                     width="16"
                     height="16"
@@ -210,7 +210,7 @@ function Footer() {
                     </defs>
                   </svg>
                 </span>
-                <span className=" border-2 w-[40px] h-[40px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
+                <span className="cursor-pointer border-2 w-[40px] h-[40px] inline-flex justify-center items-center rounded-full border-roundedGrey bg-lightDark">
                   <svg
                     width="16"
                     height="16"

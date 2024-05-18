@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Outlet } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import logo from "/src/assets/Logo.png";
 import openIcon from "/src/assets/openMenu.png";
@@ -141,6 +142,8 @@ function Header() {
           </div>
         </div>
       </div>
+
+      <Outlet/>
     </div>
   );
 }

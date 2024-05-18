@@ -1,18 +1,8 @@
 import PropTypes from "prop-types";
-import { useEffect, useState } from "react";
+
 
 const ResponsiveHeroImg = (prop) => {
-  //  const [isMobile, setIsMobile] = useState(false);
-
-  // useEffect(() => {
-  //   function isResponsive() {
-  //     setIsMobile(window.innerWidth < 640);
-  //   }
-
-  //   window.addEventListener("resize", isResponsive);
-
-  //   return () => window.removeEventListener("resize", isResponsive);
-  // }, []);
+  
 
   return (
     <>
@@ -24,12 +14,14 @@ const ResponsiveHeroImg = (prop) => {
                 src={prop.desktopImg}
                 alt="Damien standing upright with his arms folded"
                 className="w-full object-cover max-w-full sm:block hidden"
+                loading="lazy"
               />
             
               <img
                 src={prop.mobileImg}
                 alt="Damien standing upright with his arms folded"
                 className="w-full object-cover max-w-full sm:hidden block"
+                loading="lazy"
               />
             
           </div>

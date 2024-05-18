@@ -1,8 +1,11 @@
+
 import Home from "./components/pages/home/homePage";
 import About from "./components/pages/about/about";
 import Portfolio from "./components/pages/portfolio/portfolio";
 import Services from "./components/pages/services/services";
 import Contact from "./components/pages/contact/contact";
+import ErrorPage from "./components/error-page";
+import { Root } from "postcss";
 
 export const appRoutes = [
   {
@@ -25,4 +28,9 @@ export const appRoutes = [
     path: "/contact",
     component: <Contact/>,
   },
+  {
+    path: "/",
+    component: <Root/>,
+    error: <ErrorPage/>
+  }
 ];
