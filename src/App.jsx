@@ -1,23 +1,34 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation,  } from "react-router-dom";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 import { appRoutes } from "./appRoutes";
 // import Header from "./components/header";
 import NotFound from "./components/notfound";
-
-
+import { useState, useEffect, Suspense} from "react";
 
 function App() {
   const location = useLocation();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    function mobileScreen() {
+      setIsMobile(window.innerWidth < 1024);
+    }
+
+    window.addEventListener("resize", mobileScreen);
+
+    return () => window.removeEventListener("resize", mobileScreen);
+  }, []);
 
   return (
     <>
-      <SwitchTransition>
+      <SwitchTransition component={null}>
         <CSSTransition
           key={location.pathname}
-          classNames="fade"
+          classNames={ isMobile ? "" : "fade"}
           timeout={500}
           unmountOnExit
         >
+          <Suspense >
           <Routes location={location}>
             {appRoutes.map((route) => (
               <Route
@@ -25,12 +36,15 @@ function App() {
                 exact
                 path={route.path}
                 element={route.component}
-                errorElement={route.error}
+                
               />
             ))}
 
             <Route path="*" element={<NotFound />} />
           </Routes>
+          </Suspense>
+         
+    
         </CSSTransition>
       </SwitchTransition>
     </>
