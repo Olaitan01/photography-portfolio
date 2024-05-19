@@ -22,4 +22,7 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ["@swc/core-win32-x64-msvc"],
   },
+  server: {
+    historyApiFallback: true, // This ensures all routes serve the index.html
+  }
 });

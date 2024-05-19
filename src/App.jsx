@@ -1,9 +1,9 @@
-import { Routes, Route, useLocation,  } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 import { appRoutes } from "./appRoutes";
 // import Header from "./components/header";
 import NotFound from "./components/notfound";
-import { useState, useEffect, Suspense} from "react";
+import { useState, useEffect, Suspense } from "react";
 
 function App() {
   const location = useLocation();
@@ -24,27 +24,24 @@ function App() {
       <SwitchTransition component={null}>
         <CSSTransition
           key={location.pathname}
-          classNames={ isMobile ? "" : "fade"}
+          classNames={isMobile ? "" : "fade"}
           timeout={500}
           unmountOnExit
         >
-          <Suspense >
-          <Routes location={location}>
-            {appRoutes.map((route) => (
-              <Route
-                key={route.path}
-                exact
-                path={route.path}
-                element={route.component}
-                
-              />
-            ))}
+          <Suspense>
+            <Routes location={location}>
+              {appRoutes.map((route) => (
+                <Route
+                  key={route.path}
+                  exact
+                  path={route.path}
+                  element={route.component}
+                />
+              ))}
 
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+              <Route path="*" element={<NotFound />} />
+            </Routes>
           </Suspense>
-         
-    
         </CSSTransition>
       </SwitchTransition>
     </>
