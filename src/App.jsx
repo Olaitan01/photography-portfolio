@@ -28,19 +28,18 @@ function App() {
           timeout={500}
           unmountOnExit
         >
-          
-            <Routes location={location}>
-              {appRoutes.map((route) => (
-                <Route
-                  key={route.path}
-                  exact
-                  path={route.path}
-                  element={route.component}
-                />
-              ))}
+          <Routes location={location}>
+            {appRoutes.map((route) => (
+              <Route
+                key={route.path}
+                exact
+                path={route.path}
+                element={route.component}
+              />
+            ))}
 
-              <Route path="*" element={<NotFound />} />
-            </Routes>
+            <Route path="*" element={<NotFound />} />
+          </Routes>
         </CSSTransition>
       </SwitchTransition>
     </>

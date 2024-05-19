@@ -24,5 +24,5 @@ export default defineConfig({
   },
   server: {
     historyApiFallback: true, // This ensures all routes serve the index.html
-  }
+  },
 });
