@@ -3,7 +3,7 @@ import { CSSTransition, SwitchTransition } from "react-transition-group";
 import { appRoutes } from "./appRoutes";
 // import Header from "./components/header";
 import NotFound from "./components/notfound";
-import { useState, useEffect, Suspense } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const location = useLocation();
@@ -28,7 +28,7 @@ function App() {
           timeout={500}
           unmountOnExit
         >
-          <Suspense>
+          
             <Routes location={location}>
               {appRoutes.map((route) => (
                 <Route
@@ -41,7 +41,6 @@ function App() {
 
               <Route path="*" element={<NotFound />} />
             </Routes>
-          </Suspense>
         </CSSTransition>
       </SwitchTransition>
     </>
