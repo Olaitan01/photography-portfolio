@@ -5,6 +5,7 @@ import { appRoutes } from "./appRoutes";
 import NotFound from "./components/notfound";
 import { useState, useEffect } from "react";
 
+
 function App() {
   const location = useLocation();
   const [isMobile, setIsMobile] = useState(false);

@@ -3,6 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import Header from "./components/header";
+
 import "./styles/index.css";
 import "./styles/pageTransition.css";
 

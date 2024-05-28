@@ -1,21 +1,23 @@
-import { useEffect, useState } from "react";
+import { useRef } from "react";
 import HeroImg from "/src/assets/about/Image (17).png";
 import mobileHeroImg from "/src/assets/about/Image (18).png";
 import heroStar from "/src/assets/Abstract Design (3).png";
-
+import HeroAnimation from "../../../styles/animations";
 
 function AboutHero() {
-  const [isMobile, setIsMobile] = useState(false);
+  const container = useRef()
+  
+  // const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    function handleResize() {
-      setIsMobile(window.innerWidth < 640);
-    }
+  // useEffect(() => {
+  //   function handleResize() {
+  //     setIsMobile(window.innerWidth < 640);
+  //   }
 
-    window.addEventListener("resize", handleResize);
+  //   window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
 
   //work rate stats
 
@@ -48,25 +50,25 @@ function AboutHero() {
 
   return (
     <>
-      <div className=" w-[90%] flex justify-center m-auto  items-center">
-        <div className="sm:relative">
-          <div className="py-8">
-            {!isMobile ? (
+      <div className=" w-[90%] flex justify-center m-auto  items-center" ref={container} >
+        <div className="sm:relative " >
+          <div className="py-8 fade">
+            
               <img
                 src={HeroImg}
                 alt="Damien standing upright with his arms folded"
-                className="w-full object-cover max-w-full"
+                className="w-full object-cover max-w-full sm:block hidden"
               />
-            ) : (
+            
               <img
                 src={mobileHeroImg}
                 alt="Damien standing upright with his arms folded"
-                className="w-full object-cover max-w-full"
+                className="w-full object-cover max-w-full sm:hidden block"
               />
-            )}
+          
           </div>
 
-          <div className="hidden  sm:flex sm:justify-between sm:items-center sm:absolute   sm:w-full sm:bottom-12  ">
+          <div className="fade2 hidden  sm:flex sm:justify-between sm:items-center sm:absolute   sm:w-full sm:bottom-12  ">
             <div>
               <img
                 src={heroStar}
@@ -82,11 +84,11 @@ function AboutHero() {
           </div>
 
           <div className=" sm:absolute  ipad:translate-y-[0.25em]  ipad:top-[1.2em] minilaptop:top-12   laptop:top-[5em] w-full ">
-            <p className="text-[1rem] font-normal text-grey lg:pl-2">ABOUT</p>
-            <p className="text-[1.8rem] sm:text-1xl md:text-2xl font-semibold text-headerGrey ">
+            <p className="text-[1rem] font-normal text-grey lg:pl-2 fade2">ABOUT</p>
+            <p className="text-[1.8rem] sm:text-1xl md:text-2xl font-semibold text-headerGrey fade2">
               ABOUT DAMIEN BRAUN
             </p>
-            <div className=" flex justify-between   sm:w-full  flex-wrap sm:flex-nowrap m-auto  items-stretch sm:border-0 border-lightDark border-b-2  py-6 sm:py-4 pb-10 sm:gap-2    ">
+            <div className="fade2 flex justify-between   sm:w-full  flex-wrap sm:flex-nowrap m-auto  items-stretch sm:border-0 border-lightDark border-b-2  py-6 sm:py-4 pb-10 sm:gap-2    ">
               {workStats.map((workStat, index) => (
                 <div key={index} className="m-auto sm:m-0">
                   <div className="ipad:w-[14vw]  border-solid border-2 border-lightDark bg-serviceBg text-center lg:text-left p-4 my-2 w-40 sm:w-[100%] minilaptop:w-full laptop:text-center minilaptop:p-4  laptop:6 ipad:p-4 sm:p-2 lg:p-4 rounded-lg">
@@ -102,6 +104,7 @@ function AboutHero() {
             </div>
           </div>
         </div>
+        <HeroAnimation prop={container}  />
       </div>
     </>
   );

@@ -2,11 +2,15 @@ import { NavLink } from "react-router-dom";
 import rightArrow from "/src/assets/right-arrow.svg";
 import damienImg from "/src/assets/about/Image (6).png";
 import star from "/src/assets/star.png";
+// import HomeAnimation from "../../../styles/homeAnimation";
+// import { useRef } from "react";
 function Introduction() {
+// const container =  useRef()
+
   return (
-    <div className=" pt-10 w-[90%] m-auto">
-      <div className="border-b-2 border-lightDark lg:flex lg:justify-between lg:items-center lg:py-6">
-        <div>
+    <div  className=" pt-10 w-[90%] m-auto" >
+      <div className="scale border-b-2 border-lightDark lg:flex lg:justify-between lg:items-center lg:py-6">
+        <div >
           <p className="text-grey text-sm font-semilight lg:font-semibold">ABOUT</p>
           <p className="text-headerGrey text-2xl font-semibold lg:text-4xl">I AM DAMIEN</p>
         </div>
@@ -131,6 +135,7 @@ function Introduction() {
           </div>
         </div>
       </div>
+      {/* <HomeAnimation prop={container} /> */}
     </div>
   );
 }

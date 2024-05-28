@@ -3,7 +3,8 @@ import { Outlet } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import logo from "/src/assets/Logo.png";
 import openIcon from "/src/assets/openMenu.png";
-
+import HeaderAnimation from "../styles/headerAnimation";
+ 
 function Header() {
   // Mobile detection state
   const [isMobile, setIsMobile] = useState(false);
@@ -46,9 +47,14 @@ function Header() {
     navRef.current.classList.toggle("responsive_nav");
   };
 
+  const container = useRef();
+  
   return (
-    <div className="">
-      <div className="headerTop text-headerGrey   border-0 border-b-2 border-lightDark outline-none ">
+    <div>
+      <div
+        ref={container}
+        className="headerTop text-headerGrey   border-0 border-b-2 border-lightDark outline-none "
+      >
         <div className="flex justify-between items-center border-l-2 border-r-2 border-lightDark border-0 mx-6 lg:mx-20 pl-8 pt-14 lg:pt-4 ">
           <div className="pb-2 cursor-pointer">
             <img src={logo} alt="Damien logo" className="w-[100%] object-fit" />
@@ -142,8 +148,8 @@ function Header() {
           </div>
         </div>
       </div>
-
-      <Outlet/>
+      <HeaderAnimation prop={container} />
+      <Outlet />
     </div>
   );
 }

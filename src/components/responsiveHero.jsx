@@ -1,32 +1,35 @@
 import PropTypes from "prop-types";
-
+import { useRef } from "react";
+import Animation from "../styles/animations";
 
 const ResponsiveHeroImg = (prop) => {
+  const container = useRef();
   
 
   return (
     <>
-      <div className=" w-[90%] flex justify-center m-auto  items-center ">
+      <div
+        className=" w-[90%] flex justify-center m-auto  items-center "
+        ref={container}
+      >
         <div className="sm:relative">
-          <div className="py-8">
-            
-              <img
-                src={prop.desktopImg}
-                alt="Damien standing upright with his arms folded"
-                className="w-full object-cover max-w-full sm:block hidden"
-                loading="lazy"
-              />
-            
-              <img
-                src={prop.mobileImg}
-                alt="Damien standing upright with his arms folded"
-                className="w-full object-cover max-w-full sm:hidden block"
-                loading="lazy"
-              />
-            
+          <div className="py-8 fade">
+            <img
+              src={prop.desktopImg}
+              alt="Damien standing upright with his arms folded"
+              className="w-full object-cover max-w-full sm:block hidden"
+              loading="lazy"
+            />
+
+            <img
+              src={prop.mobileImg}
+              alt="Damien standing upright with his arms folded"
+              className="w-full object-cover max-w-full sm:hidden block"
+              loading="lazy"
+            />
           </div>
 
-          <div className="hidden  sm:flex sm:justify-between sm:items-center sm:absolute lg:bottom-20  ipad:bottom-8 surfaceduo:bottom-10 laptop:bottom-20  sm:w-full   ">
+          <div className="fade2 hidden  sm:flex sm:justify-between sm:items-center sm:absolute lg:bottom-20  ipad:bottom-8 surfaceduo:bottom-10 laptop:bottom-20  sm:w-full   ">
             <div>
               <img
                 src={prop.herostar}
@@ -35,7 +38,9 @@ const ResponsiveHeroImg = (prop) => {
               />
             </div>
             <div>
-              <p className={`${prop.navtext} text-[0.8rem] sm:text-[1rem]  laptop:translate-x-0 sm:translate-x-7 lg:text-[0.8rem] text-textGrey lg:w-40 laptop:w-[60%] sm:w-20 tablet:w-40`}>
+              <p
+                className={`${prop.navtext} text-[0.8rem] sm:text-[1rem]  laptop:translate-x-0 sm:translate-x-7 lg:text-[0.8rem] text-textGrey lg:w-40 laptop:w-[60%] sm:w-20 tablet:w-40`}
+              >
                 SCROLL DOWN TO SEE THE WORK
               </p>
             </div>
@@ -112,16 +117,20 @@ const ResponsiveHeroImg = (prop) => {
           <div
             className={`${prop.serviceclass} sm:absolute  lg:top-14 ipad:top-2 surfaceduo:top-6  `}
           >
-            <p className={`${prop.serviceheader} text-[1rem] font-normal text-grey lg:font-extrabold tablet:font-bold`}>
+            <p
+              className={`${prop.serviceheader} text-[1rem] font-normal text-grey lg:font-extrabold tablet:font-bold fade2`}
+            >
               {prop.header}
             </p>
-            <p className={`${prop.servicetitle} text-[1.8rem] laptop:text-5xl surfaceduo:text-3xl lg:text-5xl sm:text-xl font-semibold text-headerGrey lg:leading-[1.5em] `}>
+            <p
+              className={`${prop.servicetitle} fade2 text-[1.8rem] laptop:text-5xl surfaceduo:text-3xl lg:text-5xl sm:text-xl font-semibold text-headerGrey lg:leading-[1.5em] `}
+            >
               {prop.title}
             </p>
-            <div className="flex justify-between flex-wrap m-auto  items-stretch  border-lightDark border-b-2 sm:border-0 py-6 sm:py-4 pb-10 sm:gap-2 lg:gap-4">
+            <div className="  flex justify-between flex-wrap m-auto  items-stretch  border-lightDark border-b-2 sm:border-0 py-6 sm:py-4 pb-10 sm:gap-2 lg:gap-4">
               <div>
                 <div
-                  className={`${prop.serviceparagraph} text-center lg:text-left mobile:w-full   ipad:w-[60%] surfaceduo:w-[70%] laptop:w-[60%] `}
+                  className={`${prop.serviceparagraph} fade2 text-center lg:text-left mobile:w-full   ipad:w-[60%] surfaceduo:w-[70%] laptop:w-[60%] `}
                 >
                   <p className="text-[0.8rem] sm:text-[0.4rem] lg:text-[1rem] tablet:text-[.8rem]  font-normal text-textGrey text-left">
                     {prop.paragraph}
@@ -131,6 +140,7 @@ const ResponsiveHeroImg = (prop) => {
             </div>
           </div>
         </div>
+        <Animation prop={container} />
       </div>
     </>
   );

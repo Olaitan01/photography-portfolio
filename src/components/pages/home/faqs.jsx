@@ -60,6 +60,8 @@ function Faqs() {
     },
   ];
 
+  
+
   function toggleQuestion(index) {
     if (openIndexes.includes(index)) {
       setOpenIndexes(openIndexes.filter((item) => item !== index));
