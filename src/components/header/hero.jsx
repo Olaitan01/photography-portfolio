@@ -22,8 +22,8 @@ function Hero() {
   // }, []);
 
   return (
-    <div  className=" overflow-x-hidden hero lg:pb-20">
-      <div className="fade text-headerGrey  py-10 w-[90%] m-auto lg:flex lg:justify-between lg:items-center lg:pb-24">
+    <div  className="  overflow-x-hidden hero lg:pb-20">
+      <div className=" fade text-headerGrey  py-10 w-[90%] m-auto lg:flex lg:justify-between lg:items-center lg:pb-24">
         <div >
           <p className=" text-lg font-semilight text-grey">
             STUNNING PHOTOGRAPHY BY
@@ -42,7 +42,7 @@ function Hero() {
           <p className="font-semibold text-2xl lg:text-4xl">WORK TOGETHER</p>
         </div>
       </div>
-      <Marquee autoFill className="fade servicesAnimation text-xLightPurple text-sm font-light flex items-center justify-between overflow-x-hidden  w-full   border-t-[0.5px] border-b-[0.5px] border-t-lightDark border-b-lightDark py-2 bg-serviceBg">
+      <Marquee autoFill className="-z-10 lg:z-10 fade servicesAnimation text-xLightPurple text-sm font-light flex items-center justify-between overflow-x-hidden  w-full   border-t-[0.5px] border-b-[0.5px] border-t-lightDark border-b-lightDark py-2 bg-serviceBg">
         <span className="inline-block ">EVENT PHOTOGRAPHY</span>
         <span className="block ">
           <img src={glitter} alt="purple glitter icon" />

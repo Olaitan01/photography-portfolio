@@ -2,18 +2,18 @@ import PropTypes from "prop-types";
 import { useRef } from "react";
 import Animation from "../styles/animations";
 
-const ResponsiveHeroImg = (prop) => {
+ function ResponsiveHeroImg(prop) {
   const container = useRef();
   
 
   return (
-    <>
+    < div className="z-[-100] relative">
       <div
         className=" w-[90%] flex justify-center m-auto  items-center "
         ref={container}
       >
         <div className="sm:relative">
-          <div className="py-8 fade">
+          <div className="py-8 fade ">
             <img
               src={prop.desktopImg}
               alt="Damien standing upright with his arms folded"
@@ -115,7 +115,7 @@ const ResponsiveHeroImg = (prop) => {
           </div>
 
           <div
-            className={`${prop.serviceclass} sm:absolute  lg:top-14 ipad:top-2 surfaceduo:top-6  `}
+            className={`${prop.serviceclass}  sm:absolute  lg:top-14 ipad:top-2 surfaceduo:top-6  `}
           >
             <p
               className={`${prop.serviceheader} text-[1rem] font-normal text-grey lg:font-extrabold tablet:font-bold fade2`}
@@ -130,7 +130,7 @@ const ResponsiveHeroImg = (prop) => {
             <div className="  flex justify-between flex-wrap m-auto  items-stretch  border-lightDark border-b-2 sm:border-0 py-6 sm:py-4 pb-10 sm:gap-2 lg:gap-4">
               <div>
                 <div
-                  className={`${prop.serviceparagraph} fade2 text-center lg:text-left mobile:w-full   ipad:w-[60%] surfaceduo:w-[70%] laptop:w-[60%] `}
+                  className={`${prop.serviceparagraph}  fade2 text-center lg:text-left mobile:w-full   ipad:w-[60%] surfaceduo:w-[70%] laptop:w-[60%] `}
                 >
                   <p className="text-[0.8rem] sm:text-[0.4rem] lg:text-[1rem] tablet:text-[.8rem]  font-normal text-textGrey text-left">
                     {prop.paragraph}
@@ -142,9 +142,9 @@ const ResponsiveHeroImg = (prop) => {
         </div>
         <Animation prop={container} />
       </div>
-    </>
+    </div>
   );
-};
+}
 
 ResponsiveHeroImg.prototype = {
   img: PropTypes.string.isRequired,
@@ -156,5 +156,6 @@ ResponsiveHeroImg.prototype = {
   serviceclass: PropTypes.string.isRequired,
   serviceparagraph: PropTypes.string.isRequired,
 };
+
 
 export default ResponsiveHeroImg;

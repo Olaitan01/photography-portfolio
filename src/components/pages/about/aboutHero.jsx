@@ -49,7 +49,7 @@ function AboutHero() {
   ];
 
   return (
-    <>
+    <div >
       <div className=" w-[90%] flex justify-center m-auto  items-center" ref={container} >
         <div className="sm:relative " >
           <div className="py-8 fade">
@@ -106,7 +106,7 @@ function AboutHero() {
         </div>
         <HeroAnimation prop={container}  />
       </div>
-    </>
+    </div>
   );
 }
 
